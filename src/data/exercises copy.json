@@ -1,0 +1,1790 @@
+{
+    "exercises": [
+        {
+            "id": 1,
+            "category": "Syntax",
+            "name": "Child: >",
+            "nameDe": "Kinder: >",
+            "emmet": "nav>ul>li",
+            "result": "<nav>\n<ul>\n<li></li>\n</ul>\n</nav>",
+            "btntext": ["nav", "ul", "li"]
+        },
+        {
+            "id": 2,
+            "category": "Syntax",
+            "name": "Sibling: +",
+            "nameDe": "Geschwister: +",
+            "emmet": "div+p+bq",
+            "result": "<div></div>\n<p></p>\n<blockquote></blockquote>",
+            "btntext": ["div", "p", "bq"]
+        },   
+        {
+            "id": 3,
+            "category": "Syntax",
+            "name": "Climp-up : ^ (1)",
+            "nameDe": "Hochklettern: ^ (1)",
+            "emmet": "div+div>p>span+em^bq",
+            "result": "<div></div>\n<div>\n<p>\n<span></span><em></em></p>\n<blockquote></blockquote>\n</div>",
+            "btntext": ["div", "p", "span", "em^bq"]
+        },   
+        {
+            "id": 4,
+            "category": "Syntax",
+            "name": "Climp-up: ^ (2)",
+            "nameDe": "Hochklettern: ^ (2)",
+            "emmet": "div+div>p>span+em^^bq",
+            "result": "<div></div>\n<div>\n<p>\n<span></span><em></em>\n</p>\n</div>\n<blockquote></blockquote>\n",
+            "btntext": ["div", "p", "span", "em^^bq"]
+        },   
+        {
+            "id": 5,
+            "category": "Syntax",
+            "name": "Grouping: () (1)",
+            "nameDe": "Gruppieren: () (1)",
+            "emmet": "div>(header>ul>li*2>a)+footer>p",
+            "result": "<div>\n<header>\n<ul>\n<li><a href=\"\"></a></li>\n<li><a href=\"\"></a></li>\n</ul>\n</header>\n<footer>\n<p></p>\n</footer>\n</div>",
+            "btntext": ["div", "header", "ul", "li", "2", "a", "footer", "p"]
+        },   
+        {
+            "id": 6,
+            "category": "Syntax",
+            "name": "Grouping: () (2)",
+            "nameDe": "Gruppieren: () (2)",
+            "emmet": "(div>dl>(dt+dd)*3)+footer>p",
+            "result": "<div>\n<dl>\n<dt></dt>\n<dd></dd>\n<dt></dt>\n<dd></dd>\n<dt></dt>\n<dd></dd>\n</dl>\n</div>\n<footer>\n<p></p>\n</footer> ",
+            "btntext": ["div", "dl", "dt", "dd", "3", "footer", "p"]
+        },   
+        {
+            "id": 7,
+            "category": "Syntax",
+            "name": "Multiplication: *",
+            "nameDe": "Multiplikation: *",
+            "emmet": "ul>li*5",
+            "result": "<ul>\n<li></li>\n<li></li>\n<li></li>\n<li></li>\n<li></li>\n</ul>",
+            "btntext": ["ul", "li", "5"]
+        },   
+        {
+            "id": 8,
+            "category": "Syntax",
+            "name": "Item numbering: $ (1)",
+            "nameDe": "Nummerierung von Elementen: $ (1)",
+            "emmet": "ul>li.item$*5",
+            "result": "<ul>\n<li class= \"item1\"></li>\n<li class= \"item2\"></li>\n<li class= \"item3\"></li>\n<li class= \"item4\"></li>\n<li class= \"item5\"></li>\n</ul>",
+            "btntext": ["ul", "li", "item", "$", "5"]
+        },
+        {
+            "id": 9,
+            "category": "Syntax",
+            "name": "Item numbering: $ (2)",
+            "nameDe": "Nummerierung von Elementen: $ (2)",
+            "emmet": "h$[title=item$]{Header $}*3",
+            "result": " <h1 title=\"item1\">Header 1</h1>\n<h2 title=\"item2\">Header 2</h2>\n<h3 title=\"item3\">Header 3</h3\n",
+            "btntext": ["h", "title", "item", "$", "Header ", "3"]
+        },   
+        {
+            "id": 10,
+            "category": "Syntax",
+            "name": "Item numbering: $ (3)",
+            "nameDe": "Nummerierung von Elementen: $ (3)",
+            "emmet": "ul>li.item$$$*5",
+            "result": "<ul>\n<li class=\"item001\"></li>\n<li class=\"item002\"></li>\n<li class=\"item003\"></li>\n<li class=\"item004\"></li>\n<li class=\"item005\"></li>\n</ul> ",
+            "btntext": ["ul", "li", "item", "$", "5"]
+        },   
+        {
+            "id": 11,
+            "category": "Syntax",
+            "name": "Item numbering: $ (4)",
+            "nameDe": "Nummerierung von Elementen: $ (4)",
+            "emmet": "ul>li.item$@-*5",
+            "result": "<ul>\n<li class=\"item5\"></li>\n<li class=\"item4\"></li>\n<li class=\"item3\"></li>\n<li class=\"item2\"></li>\n<li class=\"item1\"></li>\n</ul> ",
+            "btntext": ["ul", "li", "item", "$", "@", "5"]
+        },   
+        {
+            "id": 12,
+            "category": "Syntax",
+            "name": "Item numbering: $ (5)",
+            "nameDe": "Nummerierung von Elementen: $ (5)",
+            "emmet": "ul>li.item$@3*5",
+            "result": "<ul>\n<li class=\"item3\"></li>\n<li class=\"item4\"></li>\n<li class=\"item5\"></li>\n<li class=\"item6\"></li>\n<li class=\"item7\"></li>\n</ul>",
+            "btntext": ["ul", "li", "item", "$", "@", "3", "5"]
+        },      
+        {
+            "id": 13,
+            "category": "Syntax",
+            "name": "ID and CLASS attributes (1)",
+            "nameDe": "ID- und CLASS-Attribute (1)",
+            "emmet": "#header",
+            "result": "<div id=\"header\"></div>",
+            "btntext": ["#","header"]
+        },
+        {
+            "id": 14,
+            "category": "Syntax",
+            "name": "ID and CLASS attributes (2)",
+            "nameDe": "ID- und CLASS-Attribute (2)",
+            "emmet": ".title",
+            "result": "<div class=\"title\"></div> ",
+            "btntext": ["title"]
+        },
+        {
+            "id": 15,
+            "category": "Syntax",
+            "name": "ID and CLASS attributes (3)",
+            "nameDe": "ID- und CLASS-Attribute (3)",
+            "emmet": "form#search.wide",
+            "result": "<form id=\"search\" class=\"wide\"></form> ",
+            "btntext": ["form", "#", "search", "wide"]
+        },
+        {
+            "id": 16,
+            "category": "Syntax",
+            "name": "ID and CLASS attributes (4)",
+            "nameDe": "ID- und CLASS-Attribute (4)",
+            "emmet": "p.class1.class2.class3",
+            "result": "<p class=\"class1 class2 class3\"></p> ",
+            "btntext": ["p", "class", "1", "2", "3"]
+        },   
+        {
+            "id": 17,
+            "category": "Syntax",
+            "name": "Custom attributes (1)",
+            "nameDe": "Benutzerdefinierte Attribute (1)",
+            "emmet": "p[title=\"Hello world\"]",
+            "result": "<p title=\"Hello world\"></p> ",
+            "btntext": ["p", "title", "Hello", "world"]
+        },   
+        {
+            "id": 18,
+            "category": "Syntax",
+            "name": "Custom attributes (2)",
+            "nameDe": "Benutzerdefinierte Attribute (2)",
+            "emmet": "td[rowspan=2 colspan=3 title]",
+            "result": "<td rowspan=\"2\" colspan=\"3\" title=\"\"></td>",
+            "btntext": ["td", "rowspan", "2", "colspan", "3", "title"]
+        },   
+        {
+            "id": 19,
+            "category": "Syntax",
+            "name": "Custom attributes (3)",
+            "nameDe": "Benutzerdefinierte Attribute (3)",
+            "emmet": "[a=\"value1\" b=\"value2\"]",
+            "result": "<div a=\"value1\" b=\"value2\"></div>",
+            "btntext": ["a", "value", "1", "b", "2"]
+        },      
+        {
+            "id": 20,
+            "category": "Syntax",
+            "name": "Text: {} (1)",
+            "nameDe": "Text: {} (1)",
+            "emmet": "a{Click me}",
+            "result": "<a href=\"\">Click me</a>",
+            "btntext": ["a", "Click me"]
+        },   
+        {
+            "id": 21,
+            "category": "Syntax",
+            "name": "Text: {} (2)",
+            "nameDe": "Text: {} (2)",
+            "emmet": "p>{Click }+a{here}+{ to continue}",
+            "result": "<p>Click <a href=\"\">here</a> to continue</p>",
+            "btntext": ["p", "Click ", "a", "here", " to continue"]
+        },   
+        {
+            "id": 22,
+            "category": "Syntax",
+            "name": "Implicit tag names (1)",
+            "nameDe": "Implizite Tag-Namen (1)",
+            "emmet": ".class",
+            "result": "<div class=\"class\"></div>",
+            "btntext": ["div class", "class", "div"]
+        },   
+        {
+            "id": 23,
+            "category": "Syntax",
+            "name": "Implicit tag names (2)",
+            "nameDe": "Implizite Tag-Namen (2)",
+            "emmet": "em>.class",
+            "result": "<em><span class=\"class\"></span></em>",
+            "btntext": ["em", "class"]
+        },   
+        {
+            "id": 24,
+            "category": "Syntax",
+            "name": "Implicit tag names (3)",
+            "nameDe": "Implizite Tag-Namen (3)",
+            "emmet": "ul>.class",
+            "result": "<ul>\n<li class=\"class\"></li>\n</ul>",
+            "btntext": ["ul", "class"]
+        },   
+        {
+            "id": 25,
+            "category": "Syntax",
+            "name": "Implicit tag names (4)",
+            "nameDe": "Implizite Tag-Namen (4)",
+            "emmet": "table>.row>.col",
+            "result": "<table>\n<tr class=\"row\">\n<td class=\"col\"></td>\n</tr>\n</table>",
+            "btntext": ["table", "row", "col"]
+        },   
+        {
+            "id": 26,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "!",
+            "result": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\" />\n<title>Document</title>\n</head>\n<body>\n\n</body>\n</html>",
+            "btntext": []
+        },   
+        {
+            "id": 27,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "a",
+            "result": "<a href=\"\"></a>",
+            "btntext": ["a"]
+        },   
+        {
+            "id": 28,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "a:link",
+            "result": "<a href=\"http://\"></a> ",
+            "btntext": ["a", "link"]
+        },   
+        {
+            "id": 29,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "a:mail",
+            "result": "<a href=\"mailto:\"></a> ",
+            "btntext": ["a", "mail"]
+        },   
+        {
+            "id": 30,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "abbr",
+            "result": "<abbr title=\"\"></abbr>",
+            "btntext": ["abbr"]
+        },   
+        {
+            "id": 31,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "acr",
+            "emmet2": "acronym",
+            "result": "<acronym title=\"\"></acronym>",
+            "btntext": ["acr"]
+        },   
+        {
+            "id": 32,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "base",
+            "result": "<base href=\"\" />",
+            "btntext": ["base"]
+        },   
+        {
+            "id": 33,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "basefont",
+            "result": "<basefont />",
+            "btntext": ["basefont"]
+        },{
+            "id": 34,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "br",
+            "result": "<br /> ",
+            "btntext": ["br"]
+        }, 
+        {
+            "id": 35,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "frame",
+            "result": "<frame />",
+            "btntext": ["frame"]
+        },   
+        {
+            "id": 36,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "hr",
+            "result": "<hr />",
+            "btntext": ["hr"]
+        },   
+        {
+            "id": 37,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "bdo",
+            "result": "<bdo dir=\"\"></bdo>",
+            "btntext": ["bdo"]
+        },   
+        {
+            "id": 38,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "bdo:r",
+            "result": "<bdo dir=\"rtl\"></bdo>",
+            "btntext": ["bdo", "r"]
+        },   
+        {
+            "id": 39,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "bdo:l",
+            "result": "<bdo dir=\"ltr\"></bdo>",
+            "btntext": ["bdo", "l"]
+        },   
+        {
+            "id": 40,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "col",
+            "result": "<col />",
+            "btntext": ["col"]
+        },   
+        {
+            "id": 41,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "link",
+            "result": "<link rel=\"stylesheet\" href=\"\" />",
+            "btntext": ["link"]
+        },   
+        {
+            "id": 42,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "link:css",
+            "result": "<link rel=\"stylesheet\" href=\"style.css\" />",
+            "btntext": ["link", "css"]
+        },   
+        {
+            "id": 43,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "link:print",
+            "result": "<link rel=\"stylesheet\" href=\"print.css\" media=\"print\" /> ",
+            "btntext": ["link", "print"]
+        },   
+        {
+            "id": 44,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "link:favicon",
+            "result": "<link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"favicon.ico\" />",
+            "btntext": ["link", "favicon"]
+        },   
+        {
+            "id": 45,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "link:touch",
+            "result": "<link rel=\"apple-touch-icon\" href=\"favicon.png\" />",
+            "btntext": ["link", "touch"]
+        },   
+        {
+            "id": 46,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "link:rss",
+            "result": "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"RSS\" href=\"rss.xml\" />",
+            "btntext": ["link", "rss"]
+        },   
+        {
+            "id": 47,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "link:atom",
+            "result": "<link rel=\"alternate\" type=\"application/atom+xml\" title=\"Atom\" href=\"atom.xml\" /> ",
+            "btntext": ["link", "atom"]
+        },   
+        {
+            "id": 48,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "link:import",
+            "emmet2": "link:im",
+            "result": "<link rel=\"import\" href=\"component.html\" />",
+            "btntext": ["link", "im"]
+        },  
+        {
+            "id": 49,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "meta",
+            "result": "<meta />",
+            "btntext": ["meta"]
+        },   
+        {
+            "id": 50,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "meta:utf",
+            "result": "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\" />",
+            "btntext": ["meta", "utf"]
+        },   
+        {
+            "id": 51,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "meta:win",
+            "result": "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=windows-1251\" />",
+            "btntext": ["meta", "win"]
+        },  
+        {
+            "id": 52,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "meta:vp",
+            "result": "<meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\" />",
+            "btntext": ["meta", "vp"]
+        },   
+        {
+            "id": 53,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "meta:compat",
+            "result": "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=7\" />",
+            "btntext": ["meta", "compat"]
+        },   
+        {
+            "id": 54,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "style",
+            "result": "<style></style>",
+            "btntext": ["style"]
+        },   
+        {
+            "id": 55,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "script",
+            "result": "<script></script>",
+            "btntext": ["script"]
+        }, 
+        {
+            "id": 56,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "script:src",
+            "result": "<script src=\"\"></script>",
+            "btntext": ["script", "src"]
+        },   
+        {
+            "id": 57,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "img",
+            "result": "<img src=\"\" alt=\"\" />",
+            "btntext": ["img"]
+        },   
+        {
+            "id": 58,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "img:srcset",
+            "emmet2": "img:s",
+            "result": "<img srcset=\"\" src=\"\" alt=\"\" />",
+            "btntext": ["img","srcset"]
+        },   
+        {
+            "id": 59,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "img:sizes",
+            "emmet2": "img:z", 
+            "result": "<img sizes=\"\" srcset=\"\" src=\"\" alt=\"\" />",
+            "btntext": ["img","sizes"]
+        },   
+        {
+            "id": 60,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "picture",
+            "result": "<picture></picture>",
+            "btntext": ["picture"]
+        },   
+        {
+            "id": 61,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "source",
+            "emmet2": "src",
+            "result": "<source />",
+            "btntext": ["source"]
+        },   
+        {
+            "id": 62,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "source:src",
+            "emmet2": "src:sc",
+            "result": "<source src=\"\" type=\"\" />",
+            "btntext": ["source","src"]
+        },   
+        {
+            "id": 63,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "source:srcset",
+            "emmet2": "src:s",
+            "result": "<source srcset=\"\" />",
+            "btntext": ["source", "srcset"]
+        },   
+        {
+            "id": 64,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "source:media",
+            "emmet2": "src:m",
+            "result": "<source media=\"(min-width: )\" srcset=\"\" /> ",
+            "btntext": ["source", "media"]
+        },   
+        {
+            "id": 65,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "source:type",
+            "emmet2": "src:t",
+            "result": "<source srcset=\"\" type=\"image/\" />",
+            "btntext": ["source", "type"]
+        },   
+        
+        {
+            "id": 66,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "source:sizes",
+            "emmet2": "src:z",
+            "result": "<source sizes=\"\" srcset=\"\" />",
+            "btntext": ["source", "sizes"]
+        },   
+        
+        {
+            "id": 67,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "source:media:type",
+            "emmet2": "src:mt",
+            "result": "<source media=\"(min-width: )\" srcset=\"\" type=\"image/\" />",
+            "btntext": ["source", "media", "type"]
+        },   
+        {
+            "id": 68,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "source:media:sizes",
+            "emmet2": "src:mz",
+            "result": "<source media=\"(min-width: )\" sizes=\"\" srcset=\"\" />",
+            "btntext": ["source", "media", "sizes"]
+        },   
+        {
+            "id": 69,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "source:sizes:type",
+            "emmet2": "src:zt",
+            "result": "<source sizes=\"\" srcset=\"\" type=\"image/\" />",
+            "btntext": ["source", "sizes", "type"]
+        },   
+        {
+            "id": 70,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "iframe",
+            "result": "<iframe src=\"\" frameborder=\"0\"></iframe>",
+            "btntext": ["iframe"]
+        },   
+        {
+            "id": 71,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "embed",
+            "result": "<embed src=\"\" type=\"\" />",
+            "btntext": ["embed"]
+        }, 
+        {
+            "id": 72,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "object",
+            "result": "<object data=\"\" type=\"\"></object>",
+            "btntext": ["object"]
+        },   
+        {
+            "id": 73,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "param",
+            "result": "<param name=\"\" value=\"\" />",
+            "btntext": ["param"]
+        },
+        {
+            "id": 74,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "map",
+            "result": " <map name=\"\"></map>",
+            "btntext": ["map"]
+        },   
+        {
+            "id": 75,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "area",     
+            "result": "<area shape=\"\" coords=\"\" href=\"\" alt=\"\" />",
+            "btntext": ["area"]
+        },{
+            "id": 76,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "area:d",
+            "result": "<area shape=\"default\" href=\"\" alt=\"\" />",
+            "btntext": ["area", "d"]
+        },   
+        {
+            "id": 77,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "area:c",
+            "result": "<area shape=\"circle\" coords=\"\" href=\"\" alt=\"\" />",
+            "btntext": ["area", "c"]
+        },
+        {
+            "id": 78,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "area:r",  
+            "result": "<area shape=\"rect\" coords=\"\" href=\"\" alt=\"\" />",
+            "btntext": ["area", "r"]
+        },   
+        {
+            "id": 79,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "area:p",
+            "result": "<area shape=\"poly\" coords=\"\" href=\"\" alt=\"\" />",
+            "btntext": ["area", "p"]
+        },   
+        {
+            "id": 80,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "form",
+            "result": "<form action=\"\"></form>",
+            "btntext": ["form"]
+        },          
+        {
+            "id": 81,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "form:get",
+            "result": "<form action=\"\" method=\"get\"></form>",
+            "btntext": ["form", "get"]
+        },   
+        {
+            "id": 82,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "form:post",
+            "result": "<form action=\"\" method=\"post\"></form>",
+            "btntext": ["form", "post"]
+        },   
+        {
+            "id": 83,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "label",
+            "result": "<label for=\"\"></label>",
+            "btntext": ["label"]
+        },   
+        {
+            "id": 84,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input",
+            "result": "<input type=\"text\" />",
+            "btntext": ["input"]
+        },   
+        {
+            "id": 85,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "inp",
+            "result": "<input type=\"text\" name=\"\" id=\"\" />",
+            "btntext": ["inp"]
+        },
+        {
+            "id": 86,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:hidden",
+            "emmet2": "input:h",
+            "alias": "input[type=hidden name]",
+            "result": "<input type=\"hidden\" name=\"\" />",
+            "btntext": ["input", "hidden"]
+        },
+        {
+            "id": 87,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:text",
+            "emmet2": "input:t",
+            "alias": "inp",
+            "result": "<input type=\"text\" name=\"\" id=\"\" />",
+            "btntext": ["input", "text"]
+        },
+        {
+            "id": 88,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:search",
+            "alias": "inp[type=search]",
+            "result": "<input type=\"search\" name=\"\" id=\"\" />",
+            "btntext": ["input", "search"]
+        },
+        {
+            "id": 89,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:email",
+            "alias": "inp[type=email]",   
+            "result": "<input type=\"email\" name=\"\" id=\"\" />",
+            "btntext": ["input", "email"]
+        },
+        {
+            "id": 90,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:url",
+            "alias": "inp[type=url]",    
+            "result": "<input type=\"url\" name=\"\" id=\"\" />",
+            "btntext": ["input", "url"]
+        },
+        {
+            "id": 91,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:password",
+            "emmet2": "input:p",
+            "alias": "inp[type=password]",           
+            "result": " <input type=\"password\" name=\"\" id=\"\" />",
+            "btntext": ["input", "password"]
+        },
+        {
+            "id": 92,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:datetime",
+            "alias": "inp[type=datetime]",
+            "result": "<input type=\"datetime\" name=\"\" id=\"\" />",
+            "btntext": ["input", "datetime"]
+        },
+        {
+            "id": 93,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:date",
+            "alias": "inp[type=date]",
+            "result": " <input type=\"date\" name=\"\" id=\"\" />",
+            "btntext": ["input", "date"]
+        },
+        {
+            "id": 94,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:datetime-local",
+            "alias": "inp[type=datetime-local]",
+            "result": "<input type=\"datetime-local\" name=\"\" id=\"\" />",
+            "btntext": ["input", "datetime", "local"]
+        },
+        {
+            "id": 95,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:month",
+            "alias": "inp[type=month]",
+            "result": "<input type=\"month\" name=\"\" id=\"\" />",
+            "btntext": ["input", "month"]
+        },   
+        {
+            "id": 96,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:week",
+            "alias": "inp[type=week]",   
+            "result": "<input type=\"week\" name=\"\" id=\"\" />",
+            "btntext": ["input", "week"]
+        },
+        {
+            "id": 97,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:time",
+            "alias": "inp[type=time]",
+            "result": "<input type=\"time\" name=\"\" id=\"\" />",
+            "btntext": ["input", "time"]
+        },
+        {
+            "id": 98,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:tel",
+            "alias": "inp[type=tel]",
+            "result": "<input type=\"tel\" name=\"\" id=\"\" />",
+            "btntext": ["input", "tel"]
+        },    
+        {
+            "id": 99,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:number",
+            "alias": "inp[type=number]",
+            "result": "<input type=\"number\" name=\"\" id=\"\" />",
+            "btntext": ["input", "number"]
+        },
+        {
+            "id": 100,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:color",
+            "alias": "inp[type=color]",
+            "result": " <input type=\"color\" name=\"\" id=\"\" />",
+            "btntext": ["input", "color"]
+        },
+        {
+            "id": 101,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:checkbox",
+            "emmet2": "input:c",
+            "alias": "inp[type=checkbox]",
+            "result": "<input type=\"checkbox\" name=\"\" id=\"\" />",
+            "btntext": ["input", "checkbox"]
+        },
+        {
+            "id": 102,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:radio",
+            "emmet2": "input:r",
+            "alias": "inp[type=radio]",
+            "result": "<input type=\"radio\" name=\"\" id=\"\" />",
+            "btntext": ["input", "radio"]
+        },
+        {
+            "id": 103,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:range",
+            "alias": "inp[type=range]",
+            "result": "<input type=\"range\" name=\"\" id=\"\" />",
+            "btntext": ["input", "range"]
+        },
+        {
+            "id": 104,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:file",
+            "emmet2": "input:f",
+            "alias": "inp[type=file]",
+            "result": "<input type=\"file\" name=\"\" id=\"\" />",
+            "btntext": ["input", "file"]
+        },
+        {
+            "id": 105,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:submit",
+            "emmet2": "input:s",
+            "result": "<input type=\"submit\" value=\"\" />",
+            "btntext": ["input", "submit"]
+        },
+        {
+            "id": 106,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:image",
+            "emmet2": "input:i",
+            "result": "<input type=\"image\" src=\"\" alt=\"\" />",
+            "btntext": ["input", "image"]
+        },
+        {
+            "id": 107,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:button",
+            "emmet2": "input:b",
+            "result": "<input type=\"button\" value=\"\" />",
+            "btntext": ["input", "button"]
+        },
+        {
+            "id": 108,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "isindex",
+            "result": "<isindex />",
+            "btntext": ["isindex"]
+        },
+        {
+            "id": 109,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "input:reset",
+            "alias": "input:button[type=reset]",
+            "result": " <input type=\"reset\" value=\"\" />",
+            "btntext": ["input", "reset"]
+        },
+        {
+            "id": 200,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "select",
+            "result": "<select name=\"\" id=\"\"></select>",
+            "btntext": ["select"]
+        },
+        {
+            "id": 201,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "select:disabled",
+            "emmet2": "select:d",
+            "alias": "select[disabled.]",
+            "result": "<select name=\"\" id=\"\" disabled=\"disabled\"></select>",
+            "btntext": ["select", "disabled"]
+        },
+        {
+            "id": 202,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "option",
+            "emmet2": "opt",
+            "result": "<option value=\"\"></option>",
+            "btntext": ["option"]
+        },
+        {
+            "id": 203,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "textarea",
+            "result": "<textarea name=\"\" id=\"\" cols=\"30\" rows=\"10\"></textarea>",
+            "btntext": ["textarea"]
+        },
+        {
+            "id": 204,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "marquee",
+            "result": "<marquee behavior=\"\" direction=\"\"></marquee>",
+            "btntext": ["marquee"]
+        },
+        {
+            "id": 205,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "menu:context",
+            "emmet2": "menu:c",
+            "alias": "menu[type=context]>",
+            "result": "<menu type=\"context\"></menu>",
+            "btntext": ["menu", "context"]
+        },
+        {
+            "id": 206,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "menu:toolbar",
+            "emmet2": "menu:t",
+            "alias": "menu[type=toolbar]>",
+            "result": "<menu type=\"toolbar\"></menu>",
+            "btntext": ["menu", "toolbar"]
+        },
+        {
+            "id": 207,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "video",
+            "result": "<video src=\"\"></video>",
+            "btntext": ["video"]
+        },
+        {
+            "id": 208,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "audio",
+            "result": "<audio src=\"\"></audio>",
+            "btntext": ["audio"]
+        },
+        {
+            "id": 209,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "html:xml",
+            "result": "<html xmlns=\"http://www.w3.org/1999/xhtml\"></html>",
+            "btntext": ["html", "xml"]
+        },
+        {
+            "id": 210,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "keygen",
+            "result": "<keygen />",
+            "btntext": ["keygen"]
+        },
+        {
+            "id": 211,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "command",
+            "result": " <command />",
+            "btntext": ["command"]
+        },
+        {
+            "id": 212,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "button:submit",
+            "emmet2": "button:s",
+            "emmet3": "btn:s",
+            "alias": "button[type=submit]",
+            "result": "<button type=\"submit\"></button>",
+            "btntext": ["button", "submit"]
+        },
+        {
+            "id": 213,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "button:reset",
+            "emmet2": "button:r",
+            "emmet3": "btn:r",
+            "emmet4": "button[type=reset]",
+            "alias": "<button type=\"reset\"></button>",
+            "result": "",
+            "btntext": ["button", "reset"]
+        },
+        {
+            "id": 214,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "button:disabled",
+            "emmet2": "button:d",
+            "emmet3": "btn:d",
+            "result": "<button disabled=\"disabled\"></button>",
+            "btntext": ["button", "disabled"]
+        },
+        {
+            "id": 215,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "fieldset:disabled",
+            "emmet2": "fieldset:d",
+            "emmet3": "fset:d",
+            "emmet4": "fst:d",
+            "result": "<fieldset disabled=\"disabled\"></fieldset>",
+            "btntext": ["fieldset", "disabled"]
+        },
+        {
+            "id": 216,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "bq",
+            "result": "<blockquote></blockquote>",
+            "btntext": ["bq"]
+        },
+        {
+            "id": 217,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "fig",
+            "result": "<figure></figure>",
+            "btntext": ["fig"]
+        },
+        {
+            "id": 218,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "figc",
+            "result": "<figcaption></figcaption>",
+            "btntext": ["figc"]
+        },
+        {
+            "id": 219,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "pic",
+            "result": "<picture></picture>",
+            "btntext": ["pic"]
+        },
+        {
+            "id": 220,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "ifr",
+            "result": "<iframe src=\"\" frameborder=\"0\"></iframe>",
+            "btntext": ["ifr"]
+        },
+        {
+            "id": 221,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "emb",
+            "result": " <embed src=\"\" type=\"\" />",
+            "btntext": ["emb"]
+        },
+        {
+            "id": 222,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "obj",
+            "result": "<object data=\"\" type=\"\"></object>",
+            "btntext": ["obj"]
+        },
+        {
+            "id": 223,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "cap",
+            "result": "<caption></caption>",
+            "btntext": ["cap"]
+        },
+        {
+            "id": 224,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "colg",
+            "result": "<colgroup></colgroup>",
+            "btntext": ["colg"]
+        },
+        {
+            "id": 225,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "fst",
+            "emmet2": "fset",
+            "result": "<fieldset></fieldset>",
+            "btntext": ["fst"]
+        },
+        {
+            "id": 226,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "btn",
+            "result": "<button></button>",
+            "btntext": ["btn"]
+        },
+        {
+            "id": 227,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "optg",
+            "result": "<optgroup></optgroup>",
+            "btntext": ["optg"]
+        },
+        {
+            "id": 228,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "tarea",
+            "result": "<textarea name=\"\" id=\"\" cols=\"30\" rows=\"10\"></textarea>",
+            "btntext": ["tarea"]
+        },
+        {
+            "id": 229,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "leg",
+            "result": "<legend></legend>",
+            "btntext": ["leg"]
+        },
+        {
+            "id": 230,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "sect",
+            "result": "<section></section>",
+            "btntext": ["sect"]
+        },
+        {
+            "id": 231,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "art",
+            "result": " <article></article>",
+            "btntext": ["art"]
+        },
+        {
+            "id": 232,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "hdr",
+            "result": "<header></header>",
+            "btntext": ["hdr"]
+        },
+        {
+            "id": 234,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "ftr",
+            "result": "<footer></footer>",
+            "btntext": ["ftr"]
+        },
+        {
+            "id": 235,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "adr",
+            "result": "<address></address>",
+            "btntext": ["adr"]
+        },
+        {
+            "id": 236,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "dlg",
+            "result": "<dialog></dialog>",
+            "btntext": ["dlg"]
+        },
+        {
+            "id": 237,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "str",
+            "result": "<strong></strong>",
+            "btntext": ["str"]
+        },
+        {
+            "id": 238,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "prog",
+            "result": "<progress></progress>",
+            "btntext": ["prog"]
+        },
+        {
+            "id": 239,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "mn",
+            "result": "<main></main>",
+            "btntext": ["mn"]
+        },
+        {
+            "id": 240,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "tem",
+            "result": "<template></template>",
+            "btntext": ["tem"]
+        },
+        {
+            "id": 241,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "datag",
+            "result": "<datagrid></datagrid>",
+            "btntext": ["datag"]
+        },
+        {
+            "id": 242,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "datal",
+            "result": "<datalist></datalist>",
+            "btntext": ["datal"]
+        },
+        {
+            "id": 243,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "kg",
+            "result": "<keygen />",
+            "btntext": ["kg"]
+        },
+        {
+            "id": 244,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "out",
+            "result": "<output></output>",
+            "btntext": ["out"]
+        },
+        {
+            "id": 245,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "det",
+            "result": "<details></details>",
+            "btntext": ["det"]
+        },
+        {
+            "id": 246,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "cmd",
+            "result": "<command />",
+            "btntext": ["cmd"]
+        },
+        {
+            "id": 247,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "doc",
+            "alias": "html>(head>meta[charset=${charset}]+title{${1:Document}})+body",
+            "result": "<html>\n<head>\n<meta charset=\"UTF-8\" />\n<title>Document</title>\n</head>\n<body>\n</body>\n</html>\n",
+            "btntext": ["doc"]
+        },
+        {
+            "id": 248,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "doc4",
+            "alias": "html>(head>meta[http-equiv=\"Content-Type\" content=\"text/html;charset=${charset}\"]+title{${1:Document}})+body",
+            "result": "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\" />\n<title>Document</title>\n</head>\n<body>\n\n</body>\n</html>",
+            "btntext": ["doc4"]
+        },
+        {
+            "id": 249,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "ri:dpr",
+            "emmet2": "ri:d",
+            "alias": "img:s",
+            "result": "<img srcset=\"\" src=\"\" alt=\"\" />",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 250,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "ri:viewport",
+            "emmet2": "ri:v",
+            "alias": "img:z",
+            "result": "<img sizes=\"\" srcset=\"\" src=\"\" alt=\"\" />",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 251,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "ri:art",
+            "emmet2": "ri:a",
+            "result": "<picture>\n<source media=\"(min-width: )\" srcset=\"\" />\n<img src=\"\" alt=\"\" />\n</picture>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 252,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "ri:type",
+            "emmet2": "ri:t",
+            "result": "<picture>\n<source srcset=\"\" type=\"image/\" />\n<img src=\"\" alt=\"\" />\n</picture>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 253,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "html:4t",
+            "alias": "!!!4t+doc4[lang=${lang}]",
+            "result": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html lang=\"en\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\" />\n<title>Document</title>\n</head>\n<body>\n\n</body>\n</html>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 254,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "html:4s",
+            "alias": "!!!4s+doc4[lang=${lang}]",
+            "result": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html lang=\"en\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\" />\n<title>Document</title>\n</head>\n<body>\n\n</body>\n</html>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 255,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "html:xt",
+            "alias": "!!!xt+doc4[xmlns=http://www.w3.org/1999/xhtml xml:lang=${lang}]",
+            "result": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\" />\n<title>Document</title>\n</head>\n<body>\n\n</body>\n</html>\n",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 256,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "html:xs",
+            "alias": "!!!xs+doc4[xmlns=http://www.w3.org/1999/xhtml xml:lang=${lang}]",
+            "result": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\" />\n<title>Document</title>\n</head>\n<body>\n\n</body>\n</html>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 257,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "html:xxs",
+            "alias": "!!!xxs+doc4[xmlns=http://www.w3.org/1999/xhtml xml:lang=${lang}]",
+            "result": " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\" />\n<title>Document</title>\n</head>\n<body>\n\n</body>\n</html>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 258,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "html:5",
+            "alias": "!!!+doc[lang=${lang}]",
+            "result": " <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\" />\n<title>Document</title>\n</head>\n<body>\n\n</body>\n</html>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 259,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "ol+",
+            "alias": "ol>li",
+            "result": "<ol>\n<li></li>\n</ol>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 260,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "ul+",
+            "alias": "ul>li",
+            "result": "<ul>\n<li></li>\n</ul>\n",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 261,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "dl+",
+            "alias": "dl>dt+dd",
+            "result": "<dl>\n<dt></dt>\n<dd></dd>\n</dl>\n",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 262,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "map+",
+            "alias": "map>area",
+            "result": "<map name=\"\">\n<area shape=\"\" coords=\"\" href=\"\" alt=\"\" />\n</map>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 263,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "table+",
+            "alias": "table>tr>td",    
+            "result": "<table>\n<tr>\n<td></td>\n</tr>\n</table>\n",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 264,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "colgroup+",
+            "emmet2": "colg+",
+            "alias": "colgroup>col",
+            "result": "<colgroup>\n<col />\n</colgroup>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 265,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "tr+",
+            "alias": "tr>td",
+            "result": "<tr>\n<td></td>\n</tr>\n",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 266,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "select+",
+            "alias": "select>option",
+            "result": "<select name=\"\" id=\"\">\n<option value=\"\"></option>\n</select>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 267,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "optgroup+",
+            "emmet2": "optg+",
+            "alias": "optgroup>option",
+            "result": "<optgroup>\n<option value=\"\"></option>\n</optgroup>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 268,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "pic+",
+            "alias": "picture>source:srcset+img",
+            "result": "<picture>\n<source srcset=\"\" />\n<img src=\"\" alt=\"\" />\n</picture>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 269,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "!!!",
+            "result": "<!DOCTYPE html>",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 270,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "!!!4t",
+            "result": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 271,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "!!!4s",
+            "result": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 272,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "!!!xt",
+            "result": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 273,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "!!!xs",
+            "result": " <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 274,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "!!!xxs",
+            "result": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 275,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "c",
+            "result": "<!-- ${child} -->",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 276,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "cc:ie6",
+            "result": "<!--[if lte IE 6]>\n${child}\n<![endif]-->",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 277,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "cc:ie",
+            "result": "<!--[if IE]>\n${child}\n<![endif]-->",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        },
+        {
+            "id": 278,
+            "category": "HTML",
+            "name": "",
+            "nameDe": "",
+            "emmet": "cc:noie",
+            "result": "<!--[if !IE]><!-->\n${child}\n<!--<![endif]-->",
+            "btntext": ["", "", "", "", "", "", "", "", ""]
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

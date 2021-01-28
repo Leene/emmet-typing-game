@@ -1,0 +1,26 @@
+category,subcategory,command,result
+Syntax,Child: >,nav>ul>li,<nav> <ul> <li></li> </ul> </nav>
+Syntax,Sibling: +,div+p+bq,<div></div> <p></p> <blockquote></blockquote>
+Syntax,Climb-up: ^,div+div>p>span+em^bq,<div></div> <div> <p><span></span><em></em></p> <blockquote></blockquote> </div>
+Syntax,Climb-up: ^,div+div>p>span+em^^bq,div+div>p>span+em^^bq
+Syntax,Grouping: (),div>(header>ul>li*2>a)+footer>p,"<div> <header> <ul> <li><a href=""""></a></li> <li><a href=""""></a></li> </ul> </header> <footer> <p></p> </footer> </div>"
+Syntax,Grouping: (),(div>dl>(dt+dd)*3)+footer>p,<div> <dl> <dt></dt> <dd></dd> <dt></dt> <dd></dd> <dt></dt> <dd></dd> </dl> </div> <footer> <p></p> </footer>
+Syntax,Multiplication: *,ul>li*5,<ul> <li></li> <li></li> <li></li> <li></li> <li></li> </ul>
+Syntax,Item numbering: $,ul>li.item$*5,"<ul> <li class=""item1""></li> <li class=""item2""></li> <li class=""item3""></li> <li class=""item4""></li> <li class=""item5""></li> </ul>"
+Syntax,Item numbering: $,h$[title=item$]{Header $}*3,"<h1 title=""item1"">Header 1</h1> <h2 title=""item2"">Header 2</h2> <h3 title=""item3"">Header 3</h3>"
+Syntax,Item numbering: $,ul>li.item$$$*5,"<ul> <li class=""item001""></li> <li class=""item002""></li> <li class=""item003""></li> <li class=""item004""></li> <li class=""item005""></li> </ul>"
+Syntax,Item numbering: $,ul>li.item$@-*5,"<ul> <li class=""item5""></li> <li class=""item4""></li> <li class=""item3""></li> <li class=""item2""></li> <li class=""item1""></li> </ul>"
+Syntax,Item numbering: $,ul>li.item$@3*5,"<ul> <li class=""item3""></li> <li class=""item4""></li> <li class=""item5""></li> <li class=""item6""></li> <li class=""item7""></li> </ul>"
+Syntax,ID and CLASS attributes,#header,"<div id=""header""></div>"
+Syntax,ID and CLASS attributes,.title,"<div class=""title""></div>"
+Syntax,ID and CLASS attributes,form#search.wide,"<form id=""search"" class=""wide""></form>"
+Syntax,ID and CLASS attributes,p.class1.class2.class3,"<p class=""class1 class2 class3""></p>"
+Syntax,Custom attributes,"p[title=""Hello world""]","<p title=""Hello world""></p>"
+Syntax,Custom attributes,td[rowspan=2 colspan=3 title],"<td rowspan=""2"" colspan=""3"" title=""""></td>"
+Syntax,Custom attributes,"[a='value1' b=""value2""]","<div a=""value1"" b=""value2""></div>"
+Syntax,Text: {},a{Click me},"<a href="""">Click me</a>"
+Syntax,Text: {},p>{Click }+a{here}+{ to continue},"<p>Click <a href="""">here</a> to continue</p>"
+Syntax,Implicit tag names,.class,"<div class=""class""></div>"
+Syntax,Implicit tag names,em>.class,"<em><span class=""class""></span></em>"
+Syntax,Implicit tag names,ul>.class,"<ul> <li class=""class""></li> </ul>"
+Syntax,Implicit tag names,table>.row>.col,"<table> <tr class=""row""> <td class=""col""></td> </tr> </table>"

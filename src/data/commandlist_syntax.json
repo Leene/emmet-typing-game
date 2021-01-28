@@ -1,0 +1,73 @@
+
+{
+"Syntax":  [{
+    "Child: >":     
+                [
+                {"command": "nav>ul>li" ,"result": "<nav> <ul> <li></li> </ul> </nav>" }
+                ]
+            },{     
+    "Sibling: +":   
+                [
+                {"command": "div+p+bq" ,"result": "<div></div> <p></p> <blockquote></blockquote>"}
+                ]
+            },{
+            
+    "Climb-up: ^": 	
+                [   
+                {"command": "div+div>p>span+em^bq", 
+                    "result":"<div></div> <div> <p><span></span><em></em></p> <blockquote></blockquote> </div>"},
+                {"command": "div+div>p>span+em^^bq" ,
+                    "result": "div+div>p>span+em^^bq"}
+                ]
+            },{
+    "Grouping: ()": 
+                [     
+                {"command": "div>(header>ul>li*2>a)+footer>p", "result": "<div> <header> <ul> <li><a href=\"\"></a></li> <li><a href=\"\"></a></li> </ul> </header> <footer> <p></p> </footer> </div>"},
+                {"command": "(div>dl>(dt+dd)*3)+footer>p", "result":"<div> <dl> <dt></dt> <dd></dd> <dt></dt> <dd></dd> <dt></dt> <dd></dd> </dl> </div> <footer> <p></p> </footer>"}
+                ]
+            },{
+    "Multiplication: *":    
+                [  
+                {"command": "ul>li*5","result": "<ul> <li></li> <li></li> <li></li> <li></li> <li></li> </ul>"}
+                ]
+            },{
+    "Item numbering: $":    
+                [  
+                {"command": "ul>li.item$*5" , "result":"<ul> <li class=\"item1\"></li> <li class=\"item2\"></li> <li class=\"item3\"></li> <li class=\"item4\"></li> <li class=\"item5\"></li> </ul>"},
+                {"command": "h$[title=item$]{Header $}*3" ,"result":"<h1 title=\"item1\">Header 1</h1> <h2 title=\"item2\">Header 2</h2> <h3 title=\"item3\">Header 3</h3>"},
+                {"command": "ul>li.item$$$*5" ,"result":"<ul> <li class=\"item001\"></li> <li class=\"item002\"></li> <li class=\"item003\"></li> <li class=\"item004\"></li> <li class=\"item005\"></li> </ul>"},
+                {"command": "ul>li.item$@-*5" ,"result":"<ul> <li class=\"item5\"></li> <li class=\"item4\"></li> <li class=\"item3\"></li> <li class=\"item2\"></li> <li class=\"item1\"></li> </ul>"},
+                {"command": "ul>li.item$@3*5" , "result":"<ul> <li class=\"item3\"></li> <li class=\"item4\"></li> <li class=\"item5\"></li> <li class=\"item6\"></li> <li class=\"item7\"></li> </ul>"}
+                ]
+            },{
+    "ID and CLASS attributes": 	    
+                [
+                {"command": "#header" ,"result": "<div id=\"header\"></div>"},
+                {"command": ".title" ,"result": "<div class=\"title\"></div>"},
+                {"command": "form#search.wide" ,"result": "<form id=\"search\" class=\"wide\"></form>"},
+                {"command": "p.class1.class2.class3" ,"result": "<p class=\"class1 class2 class3\"></p>"}
+                ]
+            },{
+    "Custom attributes": 	    
+                [
+                {"command": "p[title=\"Hello world\"]" ,"result": "<p title=\"Hello world\"></p>"},
+                {"command": "td[rowspan=2 colspan=3 title]" , "result": "<td rowspan=\"2\" colspan=\"3\" title=\"\"></td>"},
+                {"command": "[a=\"value1\" b=\"value2\"]" ,"result": "<div a=\"value1\" b=\"value2\"></div>"}
+                ]
+            },{
+    "Text: {}": 	    
+                [
+                {"command": "a{Click me}" ,"result": "<a href=\"\">Click me</a>"},
+                {"command": "p>{Click }+a{here}+{ to continue}" ,"result": "<p>Click <a href=\"\">here</a> to continue</p>"}
+                ]
+            },{
+    "Implicit tag names": 	    
+                [
+                {"command": ".class" ,"result": "<div class=\"class\"></div>"},
+                {"command": "em>.class" ,"result": "<em><span class=\"class\"></span></em>"},
+                {"command": "ul>.class" ,"result": "<ul> <li class=\"class\"></li> </ul>"},
+                {"command": "table>.row>.col" ,"result": "<table> <tr class=\"row\"> <td class=\"col\"></td> </tr> </table>"}
+                ]
+            }]
+} 
+

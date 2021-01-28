@@ -1,0 +1,46 @@
+{
+    "EmmetListCategory":
+            [
+            {"category": "Syntax"},
+            {"category": "HTML"},
+            {"category": "CSS"}
+            ],
+    "SyntaxSubcategory": 
+            [
+            {"subcategory": "Child: >"},
+            {"subcategory": "Sibling: +"},
+            {"subcategory": "Climb-up: ^"},
+            {"subcategory": "Grouping: ()"},
+            {"subcategory": "Multiplication: *" },
+            {"subcategory": "Item numbering: $" },
+            {"subcategory": "ID and CLASS attributes" },
+            {"subcategory": "Custom attributes"},
+            {"subcategory": "Text: {}"},
+            {"subcategory": "Implicit tag names"}
+            ],
+    "HTMLSubcategory":     
+            [
+            {"subcategory": "1xxHTML"},
+            {"subcategory": "2xxHTML"},
+            {"subcategory": "3xxHTML"}
+            ],
+    "CSSSubcategory":     
+            [
+            {"subcategory": "4xxCSS"},
+            {"subcategory": "5xxCSS"},
+            {"subcategory": "xxCSS"}
+            ]
+        
+}     
+                
+       	
+                      
+         
+         
+       	    
+       	                      
+        	    
+        	    
+
+    
+    
