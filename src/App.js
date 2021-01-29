@@ -17,13 +17,13 @@ export default function App() {
         <Main>
             <Header>
             
-                <LinkStyled to="/">
+                <LinkStyled to="/emmet-typing-game/">
                     <NavButton title="Zurück zum Startbereich">
                         <img alt="" src={home_icon} />
                     </NavButton>
                 </LinkStyled>
                
-                <LinkStyled to="/gamearea">
+                <LinkStyled to="/emmet-typing-game/gamearea/">
                     <NavButton title="Spiel starten">
                         <img alt="" src={start_icon} />
                     </NavButton>
@@ -31,8 +31,8 @@ export default function App() {
             </Header>
             
             <Router>
-                <Home path="/"></Home>
-                <GameArea path="/gamearea/"></GameArea>
+                <Home path="/emmet-typing-game/"></Home>
+                <GameArea path="/emmet-typing-game/gamearea/"></GameArea>
             </Router>
 
             <Home></Home>
