@@ -5,28 +5,37 @@ import { Router, Link } from '@reach/router'
 import GameArea from './components/GameArea'
 import Home from './components/Home'
 
+
+
 const home_icon = 'https://img.icons8.com/material-rounded/24/ffffff/home.png'
 const start_icon ='https://img.icons8.com/ios-filled/24/ffffff/circled-play.png'
+
+
 
 export default function App() {
     return (
         <Main>
             <Header>
+            
                 <LinkStyled to="/">
                     <NavButton title="Zurück zum Startbereich">
                         <img alt="" src={home_icon} />
                     </NavButton>
                 </LinkStyled>
+               
                 <LinkStyled to="/gamearea">
                     <NavButton title="Spiel starten">
                         <img alt="" src={start_icon} />
                     </NavButton>
                 </LinkStyled>
             </Header>
+            
             <Router>
                 <Home path="/"></Home>
                 <GameArea path="/gamearea/"></GameArea>
             </Router>
+
+            <Home></Home>
         </Main>
     )
 }

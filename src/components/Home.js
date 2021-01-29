@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { COLORS } from '../constants'
-import Logo from "../img/EmmetGame_Frontlogo_Schatten.png";
+import Logo from "../img/emmetgame_frontlogo_schatten.png";
 
 export default function Home() {
     return (

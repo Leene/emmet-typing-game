@@ -8,7 +8,7 @@ import GameOverDialog from './GameOverDialog'
 import WinnerDialog from './WinnerDialog'
 import CreateOrder from './CreateOrder'
 import Keyboard from './Keyboard'
-import Headlogo from "../img/EmmetGame_Headlogo_Schatten.png"
+import Headlogo from "../img/emmetgame_headlogo_schatten.png"
 
 export default function GameArea() {
     let order = CreateOrder()
