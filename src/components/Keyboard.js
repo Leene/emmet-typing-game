@@ -32,7 +32,7 @@ export default function Keyboard(props) {
         ))
     }
 
-    let btnTextArray = exercises[4].btntext
+ 
 
     function renderMiddleKeys() {
 
