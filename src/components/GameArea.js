@@ -6,6 +6,7 @@ import { exercises } from '../data/exercises.json'
 import TextArea, { Feedback } from './TextArea'
 import GameOverDialog from './GameOverDialog'
 import WinnerDialog from './WinnerDialog'
+import Dialog from './Dialog'
 import CreateOrder from './CreateOrder'
 import Keyboard from './Keyboard'
 import Headlogo from "../img/emmetgame_headlogo_schatten.png"
@@ -19,6 +20,8 @@ export default function GameArea() {
     const [visible, setVisible] = useState(false)
     const [winnerDialog, setWinnerDialog] = useState(false)
     const [orderNum, setOrderNum] = useState(0)
+    const [dialogType, setDialogType] = useState("kein Dialogtype gewählt")
+
     let hint = exercises[order[orderNum]].emmet
 
     const newText = exercises[order[orderNum]].result
@@ -56,6 +59,18 @@ export default function GameArea() {
                 setFeedback={setFeedback}
                 setOrderNum={setOrderNum}
             />
+
+            <Dialog
+                visible={visible}
+                setVisible={setVisible}
+                setLife={setLife}
+                setScoreState={setScoreState}
+                feedback={feedback}
+                setFeedback={setFeedback}
+                setOrderNum={setOrderNum}
+                dialogType={dialogType}
+                setDialogType={setDialogType}
+            />
             <Boxarea>
                 <div>{Feedback(feedback)}</div>
                 <DIV>
@@ -82,6 +97,8 @@ export default function GameArea() {
                             orderNum={orderNum}
                             setOrderNum={setOrderNum}
                             setWinnerDialog={setWinnerDialog}
+                            dialogType={dialogType}
+                            setDialogType={setDialogType}
                         />
                         {/* {TextArea(getTypedText(), inputText, setInputText, hint)} */}
                     </Box>

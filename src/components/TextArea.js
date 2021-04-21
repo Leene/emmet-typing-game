@@ -17,6 +17,8 @@ export default function TextArea(props) {
         orderNum,
         setOrderNum,
         setWinnerDialog,
+        dialogType, 
+        setDialogType
     } = props
 
     const btnDeleteText = 'X'
@@ -32,7 +34,9 @@ export default function TextArea(props) {
                 setOrderNum(orderNum + 1)
             } else {
                 setFeedback('Super, alle Fragen richtig gelöst!')
-                setWinnerDialog(true)
+               // setWinnerDialog(true)
+               setVisible(true)
+                setDialogType("winner")
             }
         } else {
             setFeedback('Falsch :-(')
@@ -42,6 +46,7 @@ export default function TextArea(props) {
             if (life <= 1) {
                 setFeedback('Game Over')
                 setVisible(true)
+                setDialogType("game_over")
             }
         }
     }
