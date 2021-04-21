@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/emmet-typing-game/static/css/main.819ce808.chunk.css",
-    "main.js": "/emmet-typing-game/static/js/main.5c8a3fdd.chunk.js",
-    "main.js.map": "/emmet-typing-game/static/js/main.5c8a3fdd.chunk.js.map",
+    "main.js": "/emmet-typing-game/static/js/main.da3a9046.chunk.js",
+    "main.js.map": "/emmet-typing-game/static/js/main.da3a9046.chunk.js.map",
     "runtime-main.js": "/emmet-typing-game/static/js/runtime-main.37ce839b.js",
     "runtime-main.js.map": "/emmet-typing-game/static/js/runtime-main.37ce839b.js.map",
-    "static/js/2.03fbda00.chunk.js": "/emmet-typing-game/static/js/2.03fbda00.chunk.js",
-    "static/js/2.03fbda00.chunk.js.map": "/emmet-typing-game/static/js/2.03fbda00.chunk.js.map",
+    "static/js/2.02c1a3ce.chunk.js": "/emmet-typing-game/static/js/2.02c1a3ce.chunk.js",
+    "static/js/2.02c1a3ce.chunk.js.map": "/emmet-typing-game/static/js/2.02c1a3ce.chunk.js.map",
     "static/js/3.97933fe1.chunk.js": "/emmet-typing-game/static/js/3.97933fe1.chunk.js",
     "static/js/3.97933fe1.chunk.js.map": "/emmet-typing-game/static/js/3.97933fe1.chunk.js.map",
     "index.html": "/emmet-typing-game/index.html",
     "static/css/main.819ce808.chunk.css.map": "/emmet-typing-game/static/css/main.819ce808.chunk.css.map",
-    "static/js/2.03fbda00.chunk.js.LICENSE.txt": "/emmet-typing-game/static/js/2.03fbda00.chunk.js.LICENSE.txt",
+    "static/js/2.02c1a3ce.chunk.js.LICENSE.txt": "/emmet-typing-game/static/js/2.02c1a3ce.chunk.js.LICENSE.txt",
     "static/media/emmetgame_frontlogo_schatten.f028f6b1.png": "/emmet-typing-game/static/media/emmetgame_frontlogo_schatten.f028f6b1.png"
   },
   "entrypoints": [
     "static/js/runtime-main.37ce839b.js",
-    "static/js/2.03fbda00.chunk.js",
+    "static/js/2.02c1a3ce.chunk.js",
     "static/css/main.819ce808.chunk.css",
-    "static/js/main.5c8a3fdd.chunk.js"
+    "static/js/main.da3a9046.chunk.js"
   ]
 }
