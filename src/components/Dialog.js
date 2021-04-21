@@ -19,7 +19,7 @@ export default function Dialog(props) {
           winner: [
             {
               img: "https://img.icons8.com/dotty/80/000000/trophy.png",
-              img_alt: "trophy",
+              img_alt: "Icon einer Trophaee",
               headline: "Wow, geiler Typ!",
               text: "Du hast ALLE Fragen richtig beantwortet!"
             }
@@ -29,7 +29,7 @@ export default function Dialog(props) {
           game_over: [
             {
               img: "https://img.icons8.com/dotty/80/000000/sad-cloud.png",
-              img_alt: "sad cloud",
+              img_alt: "Icon einer traurigen Wolke",
               headline: "Ohje, leider verloren :-(",
               text: "Kopf hoch, beim nächsten Mal klappt es besser :-)"
             }
@@ -140,6 +140,7 @@ const HeadLogo = styled.img`
     opacity: 1;
     height: 80px;
     padding: 2px;
+    margin-top: -20px;
 `
 const InsetShadow = styled.div`
     position: absolute;

@@ -118,13 +118,15 @@ const Gamefield = styled.section`
     text-align: center;
     height: 90vh;
     margin-top: -40px;
+    
 `
 
 const Boxarea = styled.div`
     width: auto;
     height: auto;
-    margin-top: 10vh;
-`
+    margin-top: 7vh;
+`   
+
 const DIV = styled.div`
     display: flex;
     justify-content: flex-end;

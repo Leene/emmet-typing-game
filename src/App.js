@@ -54,6 +54,7 @@ const Main = styled.main`
 const Header = styled.header`
     display: flex;
     justify-content: space-between;
+    
 `
 
 // "display: flex;" bei Link verhindert das Verrutschen der NavButtons beim Ändern der Fenstergröße:
