@@ -127,7 +127,7 @@ const BTN = styled.button`
     box-shadow: 1px 2px 3px 3px rgba(58, 32, 10, 0.2);
     min-width: 60px;
     height: 40px;
-    margin: 20px 20px 0;
+    margin: 20px 10px 0;
     padding: 10px;
     &:hover {
         background-color: rgb(${COLORS.background1_NUM});
