@@ -18,7 +18,6 @@ export default function GameArea() {
     const [feedback, setFeedback] = useState(' ')
     const [life, setLife] = useState(3)
     const [visible, setVisible] = useState(false)
-   // const [winnerDialog, setWinnerDialog] = useState(false)
     const [orderNum, setOrderNum] = useState(0)
     const [dialogType, setDialogType] = useState("kein Dialogtype gewählt")
 

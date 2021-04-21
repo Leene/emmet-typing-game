@@ -39,8 +39,6 @@ export default function Dialog(props) {
 
       let prefix = ""
       function createPrefix() {
-        console.log("prefix " + prefix)
-    
         if (dialogType === "winner") {
           prefix = dialog[0].winner[0]
           return prefix
