@@ -11,7 +11,6 @@ const home_icon = 'https://img.icons8.com/material-rounded/24/ffffff/home.png'
 const start_icon ='https://img.icons8.com/ios-filled/24/ffffff/circled-play.png'
 
 
-
 export default function App() {
     return (
         <Main>

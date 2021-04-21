@@ -19,6 +19,12 @@ export default function TextArea(props) {
         setDialogType
     } = props
 
+    const trash_icon ='https://img.icons8.com/material-outlined/24/ffffff/trash--v2.png'
+    const clear_icon ='https://img.icons8.com/material-outlined/24/ffffff/clear-symbol--v1.png'
+    const ok_icon ='https://img.icons8.com/android/24/ffffff/checkmark.png'
+
+
+
     const btnDeleteText = 'X'
     const btnInputText = 'OK'
 
@@ -52,15 +58,24 @@ export default function TextArea(props) {
     const handleDeleteBtnClick = () => {
         setInputText('Deine neue Eingabe ...')
     }
+    const handleDeleteOneCharacterBtnClick = () => {
+        setInputText(inputText.slice(0, -1))
+    }
 
     return (
         <>
             <Textarea>{inputText}</Textarea>
-            <BTN title="Eingabe löschen" onClick={handleDeleteBtnClick}>
-                {btnDeleteText}
+            <BTN title="Gesamte Eingabe löschen" onClick={handleDeleteBtnClick}>
+              <img alt="Icon von Mülleimer" src={trash_icon} />
             </BTN>
+            <BTN title="Einzelnes Zeichen löschen" onClick={handleDeleteOneCharacterBtnClick}>
+              <img alt="Icon von Löschtaste" src={clear_icon} />
+            </BTN>
+            {/* <BTN title="Eingabe löschen" onClick={handleDeleteBtnClick}>
+                {btnDeleteText}
+            </BTN> */}
             <BTN title="Eingabe bestätigen" onClick={handleOKBtnClick}>
-                {btnInputText}
+                <img alt="Icon von Löschtaste" src={ok_icon} /> 
             </BTN>
         </>
     )
@@ -99,6 +114,7 @@ const Textarea = styled.div`
     background-color: #393c8060;
     padding: 10px;
     margin-top: 8px;
+    min-height: 1.4em;
 `
 const BTN = styled.button`
     cursor: pointer;
@@ -110,6 +126,7 @@ const BTN = styled.button`
     border-radius: 20px;
     box-shadow: 1px 2px 3px 3px rgba(58, 32, 10, 0.2);
     min-width: 60px;
+    height: 40px;
     margin: 20px 20px 0;
     padding: 10px;
     &:hover {
