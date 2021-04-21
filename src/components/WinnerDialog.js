@@ -35,10 +35,10 @@ export default function GameOverDialog(props) {
             <P>Spiel beenden oder nochmal spielen?</P>
             {/*  <button onClick={handleNoBtnClick}>Nein, nochmal Spielen</button></> */}
             <BTNdiv>
-                <Link to="/">
+            <Link to="/emmet-typing-game/">
                     <BTN title="Zurück zum Startbereich">Beenden</BTN>
                 </Link>
-                <Link to="/gamearea">
+                <Link to="/emmet-typing-game/gamearea/">
                     <BTN title="Startet neues Spiel" onClick={handleNoBtnClick}>
                         Nochmal
                     </BTN>
