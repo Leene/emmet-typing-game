@@ -62,7 +62,6 @@ export default function Dialog(props) {
         <Wrap>
             <Header>
             <HeadLogo alt={prefix.img_alt} src={prefix.img} />
-            <P>DIALOG</P>
             </Header>
             <H2>{prefix.headline}</H2>
             <P>{prefix.text}</P>
