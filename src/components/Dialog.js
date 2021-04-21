@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from '@reach/router'
 import { COLORS } from '../constants'
 
-export default function GameOverDialog(props) {
+export default function Dialog(props) {
     const {
         visible,
         setVisible,
@@ -11,7 +11,44 @@ export default function GameOverDialog(props) {
         setScoreState,
         setFeedback,
         setOrderNum,
+        dialogType, 
     } = props
+
+    const dialog = [
+        {
+          winner: [
+            {
+              img: "https://img.icons8.com/dotty/80/000000/trophy.png",
+              img_alt: "trophy",
+              headline: "Wow, geiler Typ!",
+              text: "Du hast ALLE Fragen richtig beantwortet!"
+            }
+          ]
+        },
+        {
+          game_over: [
+            {
+              img: "https://img.icons8.com/dotty/80/000000/sad-cloud.png",
+              img_alt: "sad cloud",
+              headline: "Ohje, leider verloren :-(",
+              text: "Kopf hoch, beim nächsten Mal klappt es besser :-)"
+            }
+          ]
+        }
+      ]
+
+      let prefix = ""
+      function createPrefix() {
+        if (dialogType === "winner") {
+          prefix = dialog[0].winner[0]
+          return prefix
+        } else if (dialogType === "game_over") {
+          prefix = dialog[1].game_over[0]
+        }
+        return prefix
+      }
+      createPrefix()
+
 
     const handleNoBtnClick = () => {
         setVisible(false) // GameOverdialog ausblenden, to refactor
@@ -24,18 +61,16 @@ export default function GameOverDialog(props) {
     const content = (
         <Wrap>
             <Header>
-                <HeadLogo
-                    alt="sad cloud"
-                    src="https://img.icons8.com/dotty/80/000000/sad-cloud.png"
-                />
+            <HeadLogo alt={prefix.img_alt} src={prefix.img} />
+            <P>DIALOG</P>
             </Header>
-            <H2>Ohje, leider verloren :-(</H2>
-            <P>Spiel beenden oder nochmal spielen?</P>
+            <H2>{prefix.headline}</H2>
+            <P>{prefix.text}</P>
             <BTNdiv>
-                <Link to="/">
+                <Link to="/emmet-typing-game/">
                     <BTN title="Zurück zum Startbereich">Beenden</BTN>
                 </Link>
-                <Link to="/gamearea">
+                <Link to="/emmet-typing-game/gamearea/">
                     <BTN title="Startet neues Spiel" onClick={handleNoBtnClick}>
                         Nochmal
                     </BTN>
@@ -75,6 +110,7 @@ const H2 = styled.div`
 
 const P = styled.div`
     font-size: 0.8em;
+    padding:0 30px;
 `
 
 const BTN = styled.button`
@@ -96,6 +132,7 @@ const BTN = styled.button`
 
 const Wrap = styled.div`
     width: 70vw;
+   
 `
 const Header = styled.header`
     margin-top: 30px;
@@ -109,6 +146,7 @@ const InsetShadow = styled.div`
     position: absolute;
     height: 100%;
     box-shadow: inset 1px 1px 2px 0px rgba(${COLORS.light}, 0.8);
+   
 `
 
 const DIV = styled.div`

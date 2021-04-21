@@ -32,14 +32,11 @@ export default function Keyboard(props) {
         ))
     }
 
-    let btnTextArray = exercises[4].btntext
-    console.log('btnTextArray' + btnTextArray)
+ 
 
     function renderMiddleKeys() {
-        console.log('exercises: ' + exercises[4].btntext)
 
         const middleSide = exercises[order[orderNum]].btntext
-        console.log('middleSide: ' + middleSide)
 
         return middleSide.map((key) => (
             <KeysMiddleDiv onClick={() => handleClick(key)} key={key}>
@@ -58,7 +55,6 @@ export default function Keyboard(props) {
         } else {
             setInputText(inputText + symbol)
         }
-        console.log('clicked')
     }
     return (
         <>
@@ -71,12 +67,9 @@ export default function Keyboard(props) {
 export const typedText = []
 export function clickedKey(symbol) {
     typedText.push(symbol)
-    console.log('symbol: ' + symbol + 'typedText: ')
-    console.log(typedText)
 }
 
 export function getTypedText() {
-    console.log('getTypedText: ' + typedText)
     return typedText
 }
 
