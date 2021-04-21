@@ -16,8 +16,6 @@ export default function TextArea(props) {
         setVisible,
         orderNum,
         setOrderNum,
-        setWinnerDialog,
-        dialogType, 
         setDialogType
     } = props
 
@@ -34,7 +32,7 @@ export default function TextArea(props) {
                 setOrderNum(orderNum + 1)
             } else {
                 setFeedback('Super, alle Fragen richtig gelöst!')
-               // setWinnerDialog(true)
+              
                setVisible(true)
                 setDialogType("winner")
             }

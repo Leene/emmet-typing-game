@@ -8,7 +8,6 @@ export default function Home() {
         <Main>
             <LOGO
                 alt="logo"
-                //src="../img/EmmetGame_Frontlogo_Schatten.png"
                 src={Logo}
             />
             <Text>

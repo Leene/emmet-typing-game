@@ -10,10 +10,8 @@ export default function Dialog(props) {
         setLife,
         setScoreState,
         setFeedback,
-        feedback,
         setOrderNum,
         dialogType, 
-        setDialogType
     } = props
 
     const dialog = [

@@ -4,8 +4,8 @@ import { COLORS } from '../constants'
 import GameInterface from './GameInterface'
 import { exercises } from '../data/exercises.json'
 import TextArea, { Feedback } from './TextArea'
-import GameOverDialog from './GameOverDialog'
-import WinnerDialog from './WinnerDialog'
+//import GameOverDialog from './GameOverDialog'
+//import WinnerDialog from './WinnerDialog'
 import Dialog from './Dialog'
 import CreateOrder from './CreateOrder'
 import Keyboard from './Keyboard'
@@ -18,7 +18,7 @@ export default function GameArea() {
     const [feedback, setFeedback] = useState(' ')
     const [life, setLife] = useState(3)
     const [visible, setVisible] = useState(false)
-    const [winnerDialog, setWinnerDialog] = useState(false)
+   // const [winnerDialog, setWinnerDialog] = useState(false)
     const [orderNum, setOrderNum] = useState(0)
     const [dialogType, setDialogType] = useState("kein Dialogtype gewählt")
 
@@ -43,33 +43,14 @@ export default function GameArea() {
                     src={Headlogo}
                 />
             </Header>
-            <WinnerDialog
-                winnerDialog={winnerDialog}
-                setWinnerDialog={setWinnerDialog}
-                setLife={setLife}
-                setScoreState={setScoreState}
-                setFeedback={setFeedback}
-                setOrderNum={setOrderNum}
-            />
-            <GameOverDialog
-                visible={visible}
-                setVisible={setVisible}
-                setLife={setLife}
-                setScoreState={setScoreState}
-                setFeedback={setFeedback}
-                setOrderNum={setOrderNum}
-            />
-
             <Dialog
                 visible={visible}
                 setVisible={setVisible}
                 setLife={setLife}
                 setScoreState={setScoreState}
-                feedback={feedback}
                 setFeedback={setFeedback}
                 setOrderNum={setOrderNum}
-                dialogType={dialogType}
-                setDialogType={setDialogType}
+                dialogType={dialogType}    
             />
             <Boxarea>
                 <div>{Feedback(feedback)}</div>
@@ -96,11 +77,9 @@ export default function GameArea() {
                             setVisible={setVisible}
                             orderNum={orderNum}
                             setOrderNum={setOrderNum}
-                            setWinnerDialog={setWinnerDialog}
-                            dialogType={dialogType}
                             setDialogType={setDialogType}
                         />
-                        {/* {TextArea(getTypedText(), inputText, setInputText, hint)} */}
+                     
                     </Box>
                 </InsetShadow>
             </Boxarea>
