@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { COLORS } from '../constants'
+import { COLORS, VIEWPORT } from '../constants'
 import GameInterface from './GameInterface'
 import { exercises } from '../data/exercises.json'
 import TextArea, { Feedback } from './TextArea'
@@ -81,7 +81,24 @@ export default function GameArea() {
                      
                     </Box>
                 </InsetShadow>
+              
+                <GameinterfaceDesk>
+                    <GameInterface
+                        hint={hint}
+                        scoreState={scoreState}
+                        life={life}
+                    />
+                </GameinterfaceDesk>
             </Boxarea>
+           {/*  <GameinterfaceDesk>
+                <GameInterface
+                    hint={hint}
+                    scoreState={scoreState}
+                    life={life}
+                /> 
+              
+            </GameinterfaceDesk>*/}
+
             <Gameinterface>
                 <GameInterface
                     hint={hint}
@@ -118,13 +135,17 @@ const Gamefield = styled.section`
     text-align: center;
     height: 90vh;
     margin-top: -40px;
-    
+
+
+  
 `
 
 const Boxarea = styled.div`
     width: auto;
     height: auto;
     margin-top: 7vh;
+   
+    
 `   
 
 const DIV = styled.div`
@@ -138,6 +159,7 @@ const DIV = styled.div`
 `
 
 const Box = styled.div`
+
     background-color: rgba(${COLORS.light}, 0.2);
     padding: 10px;
     border-style: solid;
@@ -152,6 +174,20 @@ const Box = styled.div`
     width: 80vw;
     height: auto;
     box-shadow: 1px 1px 8px 3px ${COLORS.shadow_RGBA};
+
+    ${VIEWPORT.small} {
+            
+    }
+    
+    ${VIEWPORT.medium} {
+        
+        
+    }
+    
+    ${VIEWPORT.large} {
+        width: 50vw;
+        
+    }
 `
 const InsetShadow = styled.div`
     box-shadow: inset 1px 1px 2px 0px rgba(${COLORS.light}, 0.8);
@@ -163,8 +199,41 @@ const Textbox = styled.div`
     background-color: rgba(${COLORS.violet}, 0.7);
     padding: 10px 3px;
     height: 20vh;
-    overflow: scroll;
+    overflow-x: scroll;
     overscroll-behavior: none;
+
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        scrollbar-color: rgba(${COLORS.primary}, 0.3) rgba(${COLORS.primary}, 0);
+       // background-color: #F5F5F5;
+
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(${COLORS.violet}, 0.8);
+        border-radius:10px;
+      
+      }  
+      ::-webkit-scrollbar-corner {
+          display:hidden;
+        background-color: rgba(0,0,0, 0.1);
+      
+      } 
+      
+
+      ${VIEWPORT.small} {
+    }
+    
+    ${VIEWPORT.medium} {
+    }
+    
+    ${VIEWPORT.large} {
+        height: 45vh;
+    }
+      
 `
 
 const Gameinterface = styled.div`
@@ -177,7 +246,47 @@ const Gameinterface = styled.div`
     position: fixed;
     bottom: 0px;
     width: 100vw;
+    ${VIEWPORT.small} {
+        
+    }
+    
+    ${VIEWPORT.medium} {
+        
+    }
+    
+    ${VIEWPORT.large} {
+        display: none;
+    }
+    
 `
+const GameinterfaceDesk = styled.div`
+    display: grid;
+    grid-template-areas:    'score middle life'
+                            'keyboard keyboard keyboard';
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr 6fr 1fr; 
+    margin:40px 0;
+    position: fixed;
+    width: 52vw;
+
+    ${VIEWPORT.small} {
+        display: none;
+    }
+    
+    ${VIEWPORT.medium} {
+        display: none;
+    }
+    
+    ${VIEWPORT.large} {
+        
+    }
+    
+`
+
+
+
+
+
 
 const KeyboardStyle = styled.section`
     grid-area: keyboard;
@@ -203,4 +312,6 @@ const KeyboardStyle = styled.section`
             rgb(${COLORS.background1_NUM}, 1) 100%
         );
     }
+
+    
 `

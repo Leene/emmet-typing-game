@@ -1,19 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-import { COLORS } from './constants'
+import { COLORS, VIEWPORT} from './constants'
 import { Router, Link } from '@reach/router'
 import GameArea from './components/GameArea'
 import Home from './components/Home'
 
 
 
-const home_icon = 'https://img.icons8.com/material-rounded/24/ffffff/home.png'
-const start_icon ='https://img.icons8.com/ios-filled/24/ffffff/circled-play.png'
+const home_icon = 'https://img.icons8.com/material-rounded/48/ffffff/home.png'
+const start_icon ='https://img.icons8.com/ios-filled/48/ffffff/circled-play.png'
 
 
 export default function App() {
     return (
         <Main>
+            
             <Header>
             
                 <LinkStyled to="/emmet-typing-game/">
@@ -35,6 +36,7 @@ export default function App() {
             </Router>
 
             <Home></Home>
+            
         </Main>
     )
 }
@@ -46,14 +48,32 @@ const Main = styled.main`
         ${COLORS.background2} 100%
     );
     height: 100vh;
+
     font-size: calc(10px + 2vmin);
     color: #555;
     overflow: hidden;
+
+  
 `
 
 const Header = styled.header`
     display: flex;
     justify-content: space-between;
+
+    ${VIEWPORT.small} {
+       
+    }
+    
+    ${VIEWPORT.medium} {
+        
+    }
+    
+    ${VIEWPORT.large} {
+       // justify-content: space-evenly;
+        //justify-content: space-between;
+        
+       //width: 70vw;
+    }
     
 `
 
@@ -72,5 +92,21 @@ const NavButton = styled.button`
     margin: 0 10px;
     &:hover {
       background-color: rgb(${COLORS.background1_NUM});
-  }
+   
+  }  
+    img{
+         width:24px;
+         height:24px;
+}
+${VIEWPORT.small} {
+       
+}
+
+${VIEWPORT.medium} {
+    
+}
+
+${VIEWPORT.large} {
+    margin: 0 20vw;
+}
 `

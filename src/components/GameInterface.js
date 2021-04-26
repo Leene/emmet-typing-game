@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { COLORS } from '../constants'
+import { COLORS, VIEWPORT } from '../constants'
 
-const life = 'https://img.icons8.com/material/20/000000/hearts--v1.png'
+const life = 'https://img.icons8.com/material/40/000000/hearts--v1.png'
 
 export default function GameInterface(props) {
     const { hint, scoreState, life } = props
@@ -53,6 +53,16 @@ const HintText = styled.p`
     font-size: 80%;
     margin: 0;
     padding: 0;
+    ${VIEWPORT.small} {
+    }
+    
+    ${VIEWPORT.medium} {
+    }
+    
+    ${VIEWPORT.large} {
+        font-size: 68%;
+    }
+
 `
 
 const HintButton = styled.button`
@@ -118,4 +128,7 @@ const Life = styled.div`
 
 const LifeIcon = styled.img`
     padding: 2px;
+    width:20px;
+    height:20px;
 `
+

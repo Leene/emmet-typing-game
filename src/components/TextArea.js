@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { COLORS } from '../constants'
+import { COLORS, VIEWPORT } from '../constants'
 
 export default function TextArea(props) {
     const {
@@ -19,9 +19,9 @@ export default function TextArea(props) {
         setDialogType
     } = props
 
-    const trash_icon ='https://img.icons8.com/material-outlined/24/ffffff/trash--v2.png'
-    const clear_icon ='https://img.icons8.com/material-outlined/24/ffffff/clear-symbol--v1.png'
-    const ok_icon ='https://img.icons8.com/android/24/ffffff/checkmark.png'
+    const trash_icon ='https://img.icons8.com/material-outlined/48/ffffff/trash--v2.png'
+    const clear_icon ='https://img.icons8.com/material-outlined/48/ffffff/clear-symbol--v1.png'
+    const ok_icon ='https://img.icons8.com/android/48/ffffff/checkmark.png'
 
 
     const handleOKBtnClick = () => {
@@ -57,11 +57,18 @@ export default function TextArea(props) {
     const handleDeleteOneCharacterBtnClick = () => {
         setInputText(inputText.slice(0, -1))
     }
+   
+
+    //event.preventDefault();
+console.log("inputText"+inputText)
 
     return (
         <>
             <Textarea>{inputText}</Textarea>
-            <BTN title="Gesamte Eingabe löschen" onClick={handleDeleteBtnClick}>
+            <Input length="20" onChange={handleTextInput} placeholder="Welcher Emmet-Befehl passt?" />
+
+
+            <BTN  title="Gesamte Eingabe löschen" onClick={handleDeleteBtnClick}>
               <img alt="Icon von Mülleimer" src={trash_icon} />
             </BTN>
             <BTN title="Einzelnes Zeichen löschen" onClick={handleDeleteOneCharacterBtnClick}>
@@ -75,6 +82,11 @@ export default function TextArea(props) {
             </BTN>
         </>
     )
+    function handleTextInput(e) {
+        e.preventDefault()
+        setInputText(e.target.value)
+        
+    }
 }
 
 export function Feedback(feedbackText) {
@@ -111,7 +123,54 @@ const Textarea = styled.div`
     padding: 10px;
     margin-top: 8px;
     min-height: 1.4em;
+    
+    ${VIEWPORT.small} {
+    }
+    
+    ${VIEWPORT.medium} {
+    }
+    
+    ${VIEWPORT.large} {
+        display: none;
+    }
+
 `
+
+const Input = styled.input`
+    text-align: center;
+    color: white;
+    font-size:1em;
+    font-weight: bold;
+    background-color: #393c8060;
+    box-sizing: border-box; 
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    min-height: 1.4em;
+    border:none;
+    box-shadow: inset 2px 2px 3px 2px rgba(${COLORS.shadow}, 0.2);
+    ::placeholder { 
+        color: white;
+        opacity: 0.5; 
+    }
+    :focus, input:focus{
+        outline:2px solid rgba(255,255,255, 0.5);
+    }
+    
+    ${VIEWPORT.small} {
+        display: none;
+    }
+    
+    ${VIEWPORT.medium} {
+        display: none;
+    }
+    
+    ${VIEWPORT.large} {
+    }
+
+`
+/* -> "box-sizing: border-box; " verhindert das default padding bei Input, ohne ist Input zu groß*/
+
 const BTN = styled.button`
     cursor: pointer;
     color: rgb(${COLORS.lightText});
@@ -128,4 +187,27 @@ const BTN = styled.button`
     &:hover {
         background-color: rgb(${COLORS.background1_NUM});
     }
+    img{
+        width:24px;
+        height:24px;
+    }
+    :not(:last-child){
+        ${VIEWPORT.small} {
+            
+        }
+        
+        ${VIEWPORT.medium} {
+            
+            
+        }
+        
+        ${VIEWPORT.large} {
+            display: none;
+            
+        }
+    }
+`
+const TEXTAREA = styled.textarea`
+   
+    
 `

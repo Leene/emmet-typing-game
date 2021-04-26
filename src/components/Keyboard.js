@@ -108,13 +108,32 @@ const KeysSideDiv = styled.button`
 const KeysMiddle = styled.div`
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow-y: scroll;
     overscroll-behavior: none;
     scrollbar-width: thin;
     scrollbar-color: rgba(${COLORS.primary}, 0.2)
         rgba(${COLORS.background1_NUM}, 0);
     width: 33%;
     height: 35vh;
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        scrollbar-color: rgba(${COLORS.primary}, 0.3) rgba(${COLORS.primary}, 0);
+       // background-color: #F5F5F5;
+
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(${COLORS.primary}, 0.2);
+        border-radius:10px;
+      
+      }  
+      ::-webkit-scrollbar-corner {
+          display:hidden;
+        background-color: rgba(0,0,0, 0.1);
+      
+      } 
 `
 
 const KeysMiddleDiv = styled.button`
