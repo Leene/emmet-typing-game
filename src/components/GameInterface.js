@@ -53,6 +53,16 @@ const HintText = styled.p`
     font-size: 80%;
     margin: 0;
     padding: 0;
+    ${VIEWPORT.small} {
+    }
+    
+    ${VIEWPORT.medium} {
+    }
+    
+    ${VIEWPORT.large} {
+        font-size: 68%;
+    }
+
 `
 
 const HintButton = styled.button`
