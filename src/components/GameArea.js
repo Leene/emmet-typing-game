@@ -193,19 +193,17 @@ const InsetShadow = styled.div`
     box-shadow: inset 1px 1px 2px 0px rgba(${COLORS.light}, 0.8);
 `
 const Textbox = styled.div`
-border: magenta 1px solid;
-
     color: rgb(${COLORS.code});
     scrollbar-width: thin;
     scrollbar-color: rgba(${COLORS.primary}, 0.3) rgba(${COLORS.primary}, 0);
     background-color: rgba(${COLORS.violet}, 0.7);
     padding: 10px 3px;
     height: 20vh;
-    overflow: scroll;
+    overflow-x: scroll;
     overscroll-behavior: none;
 
 
-     /* ::-webkit-scrollbar {
+      ::-webkit-scrollbar {
         width: 10px;
       }
 
@@ -216,8 +214,15 @@ border: magenta 1px solid;
       }
       ::-webkit-scrollbar-thumb {
         background-color: rgba(${COLORS.violet}, 0.8);
+        border-radius:10px;
       
-      }  */
+      }  
+      ::-webkit-scrollbar-corner {
+          display:hidden;
+        background-color: rgba(0,0,0, 0.1);
+      
+      } 
+      
 
       ${VIEWPORT.small} {
     }
