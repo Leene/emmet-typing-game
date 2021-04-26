@@ -24,10 +24,6 @@ export default function TextArea(props) {
     const ok_icon ='https://img.icons8.com/android/24/ffffff/checkmark.png'
 
 
-
-    const btnDeleteText = 'X'
-    const btnInputText = 'OK'
-
     const handleOKBtnClick = () => {
         if (inputText === hint) {
             setScoreState(scoreState + 10)
