@@ -18,4 +18,17 @@ export const COLORS = {
     background2_NUM: '205, 151, 151' /* rosa*/
   }
 
+  export const VIEWPORT ={
+
+    smMin: '270px', // Small devices (landscape phones, 270px upto 768px  ) 
+    smMax: '767px',
+    mMin: '768px', // Medium devices (tablets, 768px upto 992px )  
+    mMax: '992px',
+    lMin: '993px', // Large devices (desktops, 992px and up) 
+    
+    small: '@media (min-width: 270px) and (max-width: 767px)',
+    medium: '@media (min-width: 768px) and (max-width: 992px)',
+    large: '@media (min-width: 992px)'
+    
+    }
   

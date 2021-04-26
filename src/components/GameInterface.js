@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { COLORS } from '../constants'
+import { COLORS, VIEWPORT } from '../constants'
 
 const life = 'https://img.icons8.com/material/40/000000/hearts--v1.png'
 
@@ -121,3 +121,4 @@ const LifeIcon = styled.img`
     width:20px;
     height:20px;
 `
+

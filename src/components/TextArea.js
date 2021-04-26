@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { COLORS } from '../constants'
+import { COLORS, VIEWPORT } from '../constants'
 
 export default function TextArea(props) {
     const {
@@ -68,7 +68,7 @@ console.log("inputText"+inputText)
             <Input length="20" onChange={handleTextInput} placeholder="Welcher Emmet-Befehl passt?" />
 
 
-            <BTN title="Gesamte Eingabe löschen" onClick={handleDeleteBtnClick}>
+            <BTN  title="Gesamte Eingabe löschen" onClick={handleDeleteBtnClick}>
               <img alt="Icon von Mülleimer" src={trash_icon} />
             </BTN>
             <BTN title="Einzelnes Zeichen löschen" onClick={handleDeleteOneCharacterBtnClick}>
@@ -123,9 +123,21 @@ const Textarea = styled.div`
     padding: 10px;
     margin-top: 8px;
     min-height: 1.4em;
+    
+    ${VIEWPORT.small} {
+    }
+    
+    ${VIEWPORT.medium} {
+    }
+    
+    ${VIEWPORT.large} {
+        display: none;
+    }
+
 `
 
 const Input = styled.input`
+    text-align: center;
     color: white;
     font-size:1em;
     font-weight: bold;
@@ -144,6 +156,18 @@ const Input = styled.input`
     :focus, input:focus{
         outline:2px solid rgba(255,255,255, 0.5);
     }
+    
+    ${VIEWPORT.small} {
+        display: none;
+    }
+    
+    ${VIEWPORT.medium} {
+        display: none;
+    }
+    
+    ${VIEWPORT.large} {
+    }
+
 `
 /* -> "box-sizing: border-box; " verhindert das default padding bei Input, ohne ist Input zu groß*/
 
@@ -166,6 +190,21 @@ const BTN = styled.button`
     img{
         width:24px;
         height:24px;
+    }
+    :not(:last-child){
+        ${VIEWPORT.small} {
+            
+        }
+        
+        ${VIEWPORT.medium} {
+            
+            
+        }
+        
+        ${VIEWPORT.large} {
+            display: none;
+            
+        }
     }
 `
 const TEXTAREA = styled.textarea`
