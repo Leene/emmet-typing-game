@@ -1,12 +1,58 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { COLORS, VIEWPORT } from '../constants'
+import StaticHeart from "../components/StaticHeart"
+import AnimatedHeart from "../components/AnimatedHeart"
+
 
 const life = 'https://img.icons8.com/material/40/000000/hearts--v1.png'
 
 export default function GameInterface(props) {
-    const { hint, scoreState, life } = props
+    const { hint, scoreState, life, stopAnimation, setStopAnimation } = props
     const [showText, setShowText] = useState(false)
+
+    const animatedHeart = (
+        <AnimatedHeart stopAnimation={stopAnimation} setStopAnimation={setStopAnimation} />
+      )
+    
+    function renderLifecon(amount) {
+        const DivHeart = styled.div`
+        display:flex;
+        flex-direction: row;
+       padding:0;
+    `
+
+    const rows = []
+        if (amount === 3) {
+            
+            rows.push(<StaticHeart />)
+            rows.push(<StaticHeart />)
+            rows.push(<StaticHeart />)
+            
+          } else if (amount === 2) {
+            
+            rows.push(animatedHeart)
+            rows.push(<StaticHeart />)
+            rows.push(<StaticHeart />)
+           // rows.splice(0, 1)
+            
+          } else if (amount === 1) {
+           
+            rows.push(animatedHeart)
+            rows.push(<StaticHeart />)
+            
+          } else if (amount === 0) {
+            
+            rows.push(animatedHeart)
+           
+        
+          }
+       return <DivHeart>{rows}</DivHeart>
+    }
+    ////////////////////////////////////////////////////////////
+
+
+
 
     return (
         <>
@@ -24,7 +70,9 @@ export default function GameInterface(props) {
                     {showText && <HintText>{hint}</HintText>}
                 </HintTextDiv>
             </Hint>
-            <Life>{Lifecon(life)}</Life>
+{/*            <Life>{Lifecon(life)}</Life>*/}           
+            <Life>{renderLifecon(life)}</Life>
+            
         </>
     )
 }
@@ -62,7 +110,6 @@ const HintText = styled.p`
     ${VIEWPORT.large} {
         font-size: 68%;
     }
-
 `
 
 const HintButton = styled.button`
@@ -120,7 +167,7 @@ const Life = styled.div`
     grid-area: life;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     font-weight: bold;
     min-width: 4em;
     height: 30px;
@@ -131,4 +178,3 @@ const LifeIcon = styled.img`
     width:20px;
     height:20px;
 `
-

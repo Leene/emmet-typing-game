@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
 import { COLORS, VIEWPORT } from '../constants'
 import GameInterface from './GameInterface'
@@ -16,10 +16,15 @@ export default function GameArea() {
     const [inputText, setInputText] = useState('Welcher Emmet-Befehl passt?')
     const [scoreState, setScoreState] = useState(0)
     const [feedback, setFeedback] = useState(' ')
-    const [life, setLife] = useState(3)
+    
+const [life, setLife] = useState(3)
+
     const [visible, setVisible] = useState(false)
     const [orderNum, setOrderNum] = useState(0)
     const [dialogType, setDialogType] = useState("kein Dialogtype gewählt")
+    const [stopAnimation, setStopAnimation] = useState("running")
+    const [type, setType] = useState('')
+
 
     let hint = exercises[order[orderNum]].emmet
 
@@ -45,7 +50,9 @@ export default function GameArea() {
             <Dialog
                 visible={visible}
                 setVisible={setVisible}
-                setLife={setLife}
+               setLife={setLife}
+             life={life}
+                //life={life.current}
                 setScoreState={setScoreState}
                 setFeedback={setFeedback}
                 setOrderNum={setOrderNum}
@@ -71,12 +78,15 @@ export default function GameArea() {
                             scoreState={scoreState}
                             setScoreState={setScoreState}
                             setFeedback={setFeedback}
-                            setLife={setLife}
-                            life={life}
+                           setLife={setLife}
+                         life={life}
+                            //life={life.current}
                             setVisible={setVisible}
                             orderNum={orderNum}
                             setOrderNum={setOrderNum}
                             setDialogType={setDialogType}
+                            stopAnimation={stopAnimation}
+                            setStopAnimation={setStopAnimation}
                         />
                      
                     </Box>
@@ -87,6 +97,10 @@ export default function GameArea() {
                         hint={hint}
                         scoreState={scoreState}
                         life={life}
+                        //life={life.current}
+
+                        stopAnimation={stopAnimation}
+                        setStopAnimation={setStopAnimation}
                     />
                 </GameinterfaceDesk>
             </Boxarea>
@@ -103,7 +117,11 @@ export default function GameArea() {
                 <GameInterface
                     hint={hint}
                     scoreState={scoreState}
-                    life={life}
+                   life={life}
+                    //life={life.current}
+
+                    stopAnimation={stopAnimation}
+                    setStopAnimation={setStopAnimation}
                 />
                 <KeyboardStyle>
                     <Keyboard

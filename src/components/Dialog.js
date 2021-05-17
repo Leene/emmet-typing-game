@@ -7,6 +7,8 @@ export default function Dialog(props) {
     const {
         visible,
         setVisible,
+        
+        life,
         setLife,
         setScoreState,
         setFeedback,
@@ -52,7 +54,8 @@ export default function Dialog(props) {
 
     const handleNoBtnClick = () => {
         setVisible(false) // GameOverdialog ausblenden, to refactor
-        setLife(3)
+        setLife(3) 
+       //life.current= 3
         setScoreState(0)
         setFeedback('')
         setOrderNum(0)
