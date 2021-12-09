@@ -23,7 +23,7 @@ Main technology is React.js. In detail you find the usage of
  ## Screenshots
  |          Start area           |             In game view              |       Game Over          |
 | :----------------------------: | :------------------------------: | :------------------: |
-| ![](./public/screenshots_finishedApp/startArea.png) | ![](./public/screenshots_finishedApp/ingame_view.png)  | ![](./public/screenshots_finishedApp/GameOverDialog.png) |
+| ![](./screenshots_finishedApp/startArea.png) | ![](./screenshots_finishedApp/ingame_view.png)  | ![](./screenshots_finishedApp/GameOverDialog.png) |
 
 
 ![](./img/screenshots_finishedApp/startArea.png) 
