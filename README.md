@@ -28,8 +28,10 @@ Main technology is React.js. In detail you find the usage of
 
 ![](./img/screenshots_finishedApp/startArea.png) 
 ## Planned Improvements
-- Delete Button for single characters
 - Syntax highlighting
 - Adding more then 20 questions in the game
-- Desktop version, where you can use your hardware keyboard
 - Little animations for life and score counter
+
+## Finished Improvements
+- Delete Button for single characters for mobile screen size
+- Desktop version, where you can use your hardware keyboard
