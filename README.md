@@ -1,7 +1,7 @@
 
 # Emmet Typing Game
 
-This is a emmet typing game for mobile. It has the total innovative name "Emmet Typing Game" and a fancy ingame keyboard for easier access to necessary special characters. If you are too lazy to clone from github, you can check out its codesandbox version under https://76fn3.csb.app.
+This is a emmet typing game for mobile. It has the total innovative name "Emmet Typing Game" and a fancy ingame keyboard for easier access to necessary special characters.
 
 ## The Idea
 
