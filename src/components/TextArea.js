@@ -27,6 +27,7 @@ export default function TextArea(props) {
   const ok_icon = "https://img.icons8.com/android/48/ffffff/checkmark.png";
 
   const handleOKBtnClick = () => {
+    console.log("life1: " + life);
     if (inputText === hint) {
       setScoreState(scoreState + 10);
       setFeedback("Richtig :-D");
@@ -41,8 +42,10 @@ export default function TextArea(props) {
         setDialogType("winner");
       }
     } else {
-      setFeedback("Falsch :-(");
       setLife(life - 1);
+
+      setFeedback("Falsch :-(");
+
       setInputText("Welcher Emmet-Befehl passt?");
 
       if (life <= 1) {
@@ -51,6 +54,8 @@ export default function TextArea(props) {
         setDialogType("game_over");
       }
     }
+
+    console.log("life2: " + life);
   };
 
   const handleDeleteBtnClick = () => {
