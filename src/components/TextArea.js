@@ -145,6 +145,7 @@ const Input = styled.input`
   width: 100%;
   padding: 10px;
   margin-top: 8px;
+
   min-height: 1.4em;
   border: none;
   box-shadow: inset 2px 2px 3px 2px rgba(${COLORS.shadow}, 0.2);

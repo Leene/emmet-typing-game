@@ -2,7 +2,8 @@ import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { COLORS, VIEWPORT } from "../constants";
 import GameInterface from "./GameInterface";
-import { exercises } from "../data/exercises.json";
+/* import { exercises } from "../data/exercises.json";*/
+import { exercises } from "../data/exercises5.json";
 import TextArea, { Feedback } from "./TextArea";
 //import GameOverDialog from './GameOverDialog'
 //import WinnerDialog from './WinnerDialog'
@@ -10,6 +11,7 @@ import Dialog from "./Dialog";
 import CreateOrder from "./CreateOrder";
 import Keyboard from "./Keyboard";
 import Headlogo from "../img/emmetgame_headlogo_schatten.png";
+import InGameHeader from "./InGameHeader";
 
 export default function GameArea() {
   let order = CreateOrder();
@@ -41,15 +43,14 @@ export default function GameArea() {
 
   return (
     <Gamefield>
-      <Header>
-        <HeadLogo alt="logo" src={Headlogo} />
-      </Header>
+      <InGameHeader />
       <Dialog
         visible={visible}
         setVisible={setVisible}
         setLife={setLife}
         life={life}
         //life={life.current}
+        scoreState={scoreState}
         setScoreState={setScoreState}
         setFeedback={setFeedback}
         setOrderNum={setOrderNum}
@@ -131,17 +132,6 @@ export default function GameArea() {
     </Gamefield>
   );
 }
-
-const Header = styled.header`
-  display: flex;
-  justify-content: center;
-  position: fixed;
-`;
-const HeadLogo = styled.img`
-  height: 30px;
-  opacity: 1;
-  padding: 2px;
-`;
 
 const Gamefield = styled.section`
   display: flex;
