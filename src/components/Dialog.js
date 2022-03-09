@@ -167,7 +167,6 @@ const DIV = styled.div`
     1 100%;
   box-shadow: 2px 2px 5px 3px ${COLORS.shadow_RGBA};
   width: 70vw;
-  height: 48vh;
-  height: 400px;
+  height: 420px;
   margin-top: 10vh;
 `;
