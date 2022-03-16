@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { COLORS, VIEWPORT } from "../constants";
 import InGameHeader from "./InGameHeader";
-import HighScoreInputDialog from "./HighScoreInputDialog";
+
+//>>>>>>>>>>>>>>>>>>>
+//<<<<<<<<<<<<<<<<<<<<
 
 function HighScoreTable(props) {
   function renderTable() {

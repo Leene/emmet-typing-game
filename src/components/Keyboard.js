@@ -1,8 +1,8 @@
 import React from "react";
 import "../css/Style.css";
 import { signs } from "../data/keyboard_symbols.json";
-/* import { exercises } from "../data/exercises.json"; */
-import { exercises } from "../data/exercises5.json";
+import { exercises } from "../data/exercises.json";
+/* import { exercises } from "../data/exercises5.json"; */
 import styled from "styled-components";
 import { COLORS } from "../constants";
 

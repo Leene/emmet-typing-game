@@ -2,8 +2,8 @@ import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { COLORS, VIEWPORT } from "../constants";
 import GameInterface from "./GameInterface";
-/* import { exercises } from "../data/exercises.json";*/
-import { exercises } from "../data/exercises5.json";
+import { exercises } from "../data/exercises.json";
+/* import { exercises } from "../data/exercises5.json"; */
 import TextArea, { Feedback } from "./TextArea";
 //import GameOverDialog from './GameOverDialog'
 //import WinnerDialog from './WinnerDialog'

@@ -2,32 +2,54 @@ import React from "react";
 import styled from "styled-components";
 import { COLORS, VIEWPORT } from "../constants";
 import BTN from "./BTN";
+import { db } from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 function HighScoreInputDialog(props) {
+  const [nameOfPlayer, setNameOfPlayer] = React.useState("");
+  const [scoreInDB, setScoreInDB] = React.useState("");
   const { scoreState } = props;
-  const points = 30;
 
-  const handleOKBtnClick = () => {
-    return console.log("Klick für Scoretabelle");
+  const handleSubmit = async (e) => {
+    let franz = "444";
+    let score = scoreState;
+    e.preventDefault();
+    console.log("score" + scoreState);
+
+    if (nameOfPlayer !== "") {
+      await addDoc(collection(db, "highscore"), {
+        nameOfPlayer,
+        completed: false,
+        scoreInDB: score,
+      });
+      setNameOfPlayer("");
+      setScoreInDB("");
+    }
   };
 
   return (
     <Div>
-      <P>
-        Du hast {scoreState} Punkte erspielt. Um sie zu speichern, gib bitte
-        deinen Namen ein:
-      </P>
-      <InputButtonDiv>
-        <Input length="15" onChange={handleTextInput} placeholder="Dein Name" />
-        <BTN type={"ok"} onClick={handleOKBtnClick} />
-      </InputButtonDiv>
+      <form onSubmit={handleSubmit}>
+        <P>
+          Du hast {scoreState} Punkte erspielt. Um sie zu speichern, gib bitte
+          deinen Namen ein:
+        </P>
+        <InputButtonDiv>
+          <div className="input_container">
+            <Input
+              type="text"
+              placeholder="Dein Name"
+              value={nameOfPlayer}
+              onChange={(e) => setNameOfPlayer(e.target.value)}
+            />
+          </div>
+          <div className="btn_container">
+            <BTN type={"ok"}></BTN>
+          </div>
+        </InputButtonDiv>
+      </form>
     </Div>
   );
-  function handleTextInput(e) {
-    e.preventDefault();
-    console.log("Name: " + e.target.value);
-    //setInputText(e.target.value);
-  }
 }
 
 export default HighScoreInputDialog;
