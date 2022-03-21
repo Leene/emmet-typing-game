@@ -2,36 +2,61 @@ import React from "react";
 import styled from "styled-components";
 import { COLORS, VIEWPORT } from "../constants";
 import InGameHeader from "./InGameHeader";
+//import HighScoreInputDialog from "./HighScoreInputDialog";
+import HighScoreTableRow from "./HighScoreTableRow";
+import {
+  collection,
+  query,
+  onSnapshot,
+  doc,
+  updateDoc,
+  deleteDoc,
+  orderBy,
+  limit,
+} from "firebase/firestore";
+import { db } from "../firebase";
 
 //>>>>>>>>>>>>>>>>>>>
 //<<<<<<<<<<<<<<<<<<<<
 
 function HighScoreTable(props) {
-  function renderTable() {
-    const tableRowContent = [
-      { name: "Franz", date: "20.3.2021", score: 150 },
-      { name: "Peter", date: "25.3.2021", score: 20 },
-      { name: "Rocko", date: "24.3.2021", score: 300 },
-    ];
+  //>>>>>>>>>>>>>>>>>>>
+  const [highscore, setHighscore] = React.useState([]);
 
-    return tableRowContent.map((key) => (
+  React.useEffect(() => {
+    /*     const q = query(collection(db, "highscore")); */
+
+    const collectionRef = collection(db, "highscore");
+    //const q = query(collectionRef, orderBy("nameOfPlayer"));
+    const q = query(collectionRef, orderBy("scoreInDB", "desc"), limit(10));
+
+    const unsub = onSnapshot(q, (querySnapshot) => {
+      let highscoreArray = [];
+      querySnapshot.forEach((doc) => {
+        highscoreArray.push({ ...doc.data(), id: doc.id });
+      });
+      setHighscore(highscoreArray);
+    });
+    return () => unsub();
+  }, []);
+  //<<<<<<<<<<<<<<<<<<<<
+
+  function renderTable() {
+    return (
       <tbody>
-        <tr>
-          <td>{key.name}</td>
-          <td>{key.date}</td>
-          <td>{key.score}</td>
-        </tr>
+        {highscore.map((highscore) => (
+          <HighScoreTableRow key={highscore.id} highscore={highscore} />
+        ))}
       </tbody>
-    ));
+    );
   }
 
   return (
     <>
       <Section>
         <InGameHeader />
-
         <Div>
-          <H3>Punktetabelle</H3>
+          <H3>Punktetabelle- Top Ten</H3>
           <InsetShadow>
             <Box>
               <Table>

@@ -24,7 +24,7 @@ export default function App() {
             </NavButton>
           </LinkStyled>
 
-          <LinkStyled to="/emmet-typing-game/highscore/">
+          <LinkStyled to="/emmet-typing-game/highscoretable/">
             <NavButton title="Zur Punktetabelle">
               <img alt="" src={score_icon} />
             </NavButton>
@@ -39,7 +39,7 @@ export default function App() {
 
       <Router>
         <Home path="/emmet-typing-game/"></Home>
-        <HighScoreTable path="/emmet-typing-game/highscore/"></HighScoreTable>
+        <HighScoreTable path="/emmet-typing-game/highscoretable/"></HighScoreTable>
         <GameArea path="/emmet-typing-game/gamearea/"></GameArea>
       </Router>
     </Main>

@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { COLORS, VIEWPORT } from "../constants";
 import BTN from "./BTN";
 import { db } from "../firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { FirebaseError } from "firebase/app";
 
 function HighScoreInputDialog(props) {
   const [nameOfPlayer, setNameOfPlayer] = React.useState("");
@@ -19,8 +20,9 @@ function HighScoreInputDialog(props) {
     if (nameOfPlayer !== "") {
       await addDoc(collection(db, "highscore"), {
         nameOfPlayer,
-        completed: false,
         scoreInDB: score,
+        createdAt: serverTimestamp(),
+        /*  completed: false, */
       });
       setNameOfPlayer("");
       setScoreInDB("");
