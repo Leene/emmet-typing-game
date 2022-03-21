@@ -1,7 +1,7 @@
 
 # Emmet Typing Game
 
-This is a emmet typing game for mobile. It has the total innovative name "Emmet Typing Game" and a fancy ingame keyboard for easier access to necessary special characters. If you are too lazy to clone from github, you can check out its codesandbox version under https://76fn3.csb.app.
+This is a emmet typing game for mobile. It has the total innovative name "Emmet Typing Game" and a fancy ingame keyboard for easier access to necessary special characters. You can find a demo version of it under https://leene.github.io/emmet-typing-game/.
 
 ## The Idea
 
@@ -17,6 +17,7 @@ Main technology is React.js. In detail you find the usage of
  - Functional programming as basic concept
  - JSX (styled components)
  - Reach router navigation
+ - Firebase as permanent storage for highscore values
  - Props
  - State hooks
 
@@ -28,12 +29,13 @@ Main technology is React.js. In detail you find the usage of
 
 ![](./img/screenshots_finishedApp/startArea.png) 
 ## Planned Improvements
-- Syntax highlighting
 - Adding more then 20 questions in the game
+- - background music, feedback sound for buttons
 - Little animations for life and score counter
+- Syntax highlighting
 
 ## Last Improvements
-- 21.03.2022: Highscore table with Firebase
+- 21.03.2022: Firebase as permanent storage for highscore values 
 
 
 
