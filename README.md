@@ -28,7 +28,7 @@ Main technology is React.js. In detail you find the usage of
 
 ## Planned Improvements
 - Adding more then 20 questions in the game
-- - background music, feedback sound for buttons
+- background music, feedback sound for buttons
 - Little animations for life and score counter
 - Syntax highlighting
 
