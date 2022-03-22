@@ -24,15 +24,9 @@ Main technology is React.js. In detail you find the usage of
  ## Screenshots
  |          Start Area           |             In Game View         |          Game Over            |             Highscore Table      | 
 | :----------------------------: | :------------------------------: | :----------------------------: | :------------------------------: | 
-| ![](./public/screenshots_finishedApp/startArea.png) | ![](./public/screenshots_finishedApp/ingameView.png)  | ![](./public/screenshots_finishedApp/gameOverDialog.png) | ![](./public/screenshots_finishedApp/highscore2Tabelle.png) | 
 
-<img src="./public/screenshots_finishedApp/startArea.png" style="height:450px">
+| <img src="./public/screenshots_finishedApp/startArea.png" style="height:450px"> | <img src="./public/screenshots_finishedApp/ingameView.png" style="height:450px"> | <img src="./public/screenshots_finishedApp/gameOverDialog.png" style="height:450px"> | <img src="./public/screenshots_finishedApp/highscore2Tabelle.png" style="height:450px"> | 
 
-      
-
-
-
-![](./img/screenshots_finishedApp/startArea.png) 
 ## Planned Improvements
 - Adding more then 20 questions in the game
 - - background music, feedback sound for buttons
