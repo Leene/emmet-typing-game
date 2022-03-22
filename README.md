@@ -22,10 +22,13 @@ Main technology is React.js. In detail you find the usage of
  - State hooks
 
  ## Screenshots
- |          Start area           |             In game view              |       Game Over          |
-| :----------------------------: | :------------------------------: | :------------------: |
-| ![](./public/screenshots_finishedApp/startArea.png) | ![](./public/screenshots_finishedApp/ingame_view.png)  | ![](./public/screenshots_finishedApp/GameOverDialog.png) | 
+ |          Start Area           |             In Game View         |
+| :----------------------------: | :------------------------------: | 
+| ![](./public/screenshots_finishedApp/startArea.png) | ![](./public/screenshots_finishedApp/ingameView.png)  | 
 
+ |          Game Over            |             Highscore Table      |      
+| :----------------------------: | :------------------------------: | 
+![](./public/screenshots_finishedApp/gameOverDialog.png) | ![](./public/screenshots_finishedApp/highscoreTabelle.png) | 
 
 ![](./img/screenshots_finishedApp/startArea.png) 
 ## Planned Improvements
