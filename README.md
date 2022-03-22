@@ -25,7 +25,7 @@ Main technology is React.js. In detail you find the usage of
  |          Start Area           |             In Game View         |          Game Over            |             Highscore Table      | 
 | :----------------------------: | :------------------------------: | :----------------------------: | :------------------------------: | 
 
-| <img src="./public/screenshots_finishedApp/startArea.png" style="height:450px"> | <img src="./public/screenshots_finishedApp/ingameView.png" style="height:450px"> | <img src="./public/screenshots_finishedApp/gameOverDialog.png" style="height:450px"> | <img src="./public/screenshots_finishedApp/highscore2Tabelle.png" style="height:450px"> | 
+| <img src="./public/screenshots_finishedApp/startArea.png" style="height:400px"> | <img src="./public/screenshots_finishedApp/ingameView.png" style="height:400px"> | <img src="./public/screenshots_finishedApp/gameOverDialog.png" style="height:400px"> | <img src="./public/screenshots_finishedApp/highscore2Tabelle.png" style="height:400px"> | 
 
 ## Planned Improvements
 - Adding more then 20 questions in the game
@@ -35,7 +35,3 @@ Main technology is React.js. In detail you find the usage of
 
 ## Last Improvements
 - 21.03.2022: Firebase as permanent storage for highscore values 
-
-
-
-
