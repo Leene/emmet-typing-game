@@ -26,6 +26,8 @@ Main technology is React.js. In detail you find the usage of
 | :----------------------------: | :------------------------------: | :----------------------------: | :------------------------------: | 
 | ![](./public/screenshots_finishedApp/startArea.png) | ![](./public/screenshots_finishedApp/ingameView.png)  | ![](./public/screenshots_finishedApp/gameOverDialog.png) | ![](./public/screenshots_finishedApp/highscore2Tabelle.png) | 
 
+<img src="./public/screenshots_finishedApp/startArea.png" style="height:450px">
+
       
 
 
