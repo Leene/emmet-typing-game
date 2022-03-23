@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/emmet-typing-game/static/css/main.5b09df0f.css",
-    "main.js": "/emmet-typing-game/static/js/main.c6665208.js",
+    "main.js": "/emmet-typing-game/static/js/main.2274e0c3.js",
     "static/js/377.751c286d.chunk.js": "/emmet-typing-game/static/js/377.751c286d.chunk.js",
     "static/media/emmetgame_frontlogo_schatten.png": "/emmet-typing-game/static/media/emmetgame_frontlogo_schatten.f028f6b15b9fb95cae7b.png",
     "index.html": "/emmet-typing-game/index.html",
     "main.5b09df0f.css.map": "/emmet-typing-game/static/css/main.5b09df0f.css.map",
-    "main.c6665208.js.map": "/emmet-typing-game/static/js/main.c6665208.js.map",
+    "main.2274e0c3.js.map": "/emmet-typing-game/static/js/main.2274e0c3.js.map",
     "377.751c286d.chunk.js.map": "/emmet-typing-game/static/js/377.751c286d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b09df0f.css",
-    "static/js/main.c6665208.js"
+    "static/js/main.2274e0c3.js"
   ]
 }
