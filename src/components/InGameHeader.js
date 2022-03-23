@@ -14,7 +14,8 @@ export default function InGameHeader() {
 const Header = styled.header`
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: absolute;
+  top: 0;
 `;
 const HeadLogo = styled.img`
   height: 30px;

@@ -86,18 +86,9 @@ const HintTextDiv = styled.div`
 
 const HintText = styled.p`
   color: rgb(${COLORS.light});
-  font-size: 80%;
   margin: 0;
   padding: 0;
-  ${VIEWPORT.small} {
-  }
-
-  ${VIEWPORT.medium} {
-  }
-
-  ${VIEWPORT.large} {
-    font-size: 68%;
-  }
+  font-size: 0.8em;
 `;
 
 const HintButton = styled.button`
@@ -123,6 +114,16 @@ const HintButton = styled.button`
       rgb(220, 236, 255) 10%
     );
     box-shadow: 2px 2px 5px 6px rgba(58, 32, 10, 0.2);
+  }
+  ${VIEWPORT.small} {
+    font-size: 0.5em;
+  }
+
+  ${VIEWPORT.medium} {
+    font-size: 0.7em;
+  }
+
+  ${VIEWPORT.large} {
   }
 `;
 
@@ -159,6 +160,16 @@ const Life = styled.div`
   font-weight: bold;
   min-width: 4em;
   height: 30px;
+  margin: 0 20px;
+  ${VIEWPORT.small} {
+  }
+
+  ${VIEWPORT.medium} {
+  }
+
+  ${VIEWPORT.large} {
+    margin-right: 0;
+  }
 `;
 
 const LifeIcon = styled.img`

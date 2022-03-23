@@ -1,4 +1,6 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import { COLORS, VIEWPORT } from "../constants";
+
 export default function StaticHeart() {
   return (
     <>
@@ -15,10 +17,22 @@ export default function StaticHeart() {
         />
       </Heart>
     </>
-  )
+  );
 }
 
 const Heart = styled.svg`
   height: 20px;
   width: 35px;
-`
+  margin: 0 3px;
+  ${VIEWPORT.small} {
+    width: 15px;
+  }
+
+  ${VIEWPORT.medium} {
+    width: 20px;
+    margin: 0 5px;
+  }
+
+  ${VIEWPORT.large} {
+  }
+`;

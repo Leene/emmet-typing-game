@@ -3,7 +3,7 @@ import "../css/Style.css";
 import signs from "../data/keyboard_symbols";
 import exercises from "../data/exercises";
 import styled from "styled-components";
-import { COLORS } from "../constants";
+import { COLORS, VIEWPORT } from "../constants";
 
 export default function Keyboard(props) {
   const { inputText, setInputText, order, orderNum } = props;
@@ -49,9 +49,11 @@ export default function Keyboard(props) {
   };
   return (
     <>
-      <KeysSide>{renderLeftKeys()}</KeysSide>
-      <KeysMiddle>{renderMiddleKeys()}</KeysMiddle>
-      <KeysSide>{renderRightKeys()}</KeysSide>
+      <Wrapper>
+        <KeysSide>{renderLeftKeys()}</KeysSide>
+        <KeysMiddle>{renderMiddleKeys()}</KeysMiddle>
+        <KeysSide>{renderRightKeys()}</KeysSide>
+      </Wrapper>
     </>
   );
 }
@@ -64,6 +66,11 @@ export function getTypedText() {
   return typedText;
 }
 
+const Wrapper = styled.div`
+  display: flex;
+  background-color: ${COLORS.bg_keyboard};
+  width: 100vw;
+`;
 const KeysSide = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -80,7 +87,7 @@ const KeysSideDiv = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  width: 30%;
+
   height: 25%;
   &:hover {
     background-color: rgb(${COLORS.violet});
@@ -94,11 +101,22 @@ const KeysSideDiv = styled.button`
     );
     box-shadow: 2px 2px 5px 6px rgba(58, 32, 10, 0.2);
   }
+  ${VIEWPORT.small} {
+    width: 31%;
+  }
+
+  ${VIEWPORT.medium} {
+    width: 32.5%;
+  }
+
+  ${VIEWPORT.large} {
+  }
 `;
 
 const KeysMiddle = styled.div`
   display: flex;
   flex-direction: column;
+
   overflow-y: scroll;
   overscroll-behavior: none;
   scrollbar-width: thin;
