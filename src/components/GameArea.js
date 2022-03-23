@@ -2,15 +2,11 @@ import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { COLORS, VIEWPORT } from "../constants";
 import GameInterface from "./GameInterface";
-import { exercises } from "../data/exercises.json";
-/* import { exercises } from "../data/exercises5.json"; */
+import exercises from "../data/exercises.js";
 import TextArea, { Feedback } from "./TextArea";
-//import GameOverDialog from './GameOverDialog'
-//import WinnerDialog from './WinnerDialog'
 import Dialog from "./Dialog";
 import CreateOrder from "./CreateOrder";
 import Keyboard from "./Keyboard";
-import Headlogo from "../img/emmetgame_headlogo_schatten.png";
 import InGameHeader from "./InGameHeader";
 
 export default function GameArea() {
@@ -24,7 +20,6 @@ export default function GameArea() {
   const [visible, setVisible] = useState(false);
   const [orderNum, setOrderNum] = useState(0);
   const [dialogType, setDialogType] = useState("kein Dialogtype gewählt");
-  /* const [stopAnimation, setStopAnimation] = useState("running") */
   const [stopAnimation, setStopAnimation] = useState("paused");
   const [type, setType] = useState("");
 
@@ -49,7 +44,6 @@ export default function GameArea() {
         setVisible={setVisible}
         setLife={setLife}
         life={life}
-        //life={life.current}
         scoreState={scoreState}
         setScoreState={setScoreState}
         setFeedback={setFeedback}
@@ -78,7 +72,6 @@ export default function GameArea() {
               setFeedback={setFeedback}
               setLife={setLife}
               life={life}
-              //life={life.current}
               setVisible={setVisible}
               orderNum={orderNum}
               setOrderNum={setOrderNum}
@@ -94,29 +87,17 @@ export default function GameArea() {
             hint={hint}
             scoreState={scoreState}
             life={life}
-            //life={life.current}
-
             stopAnimation={stopAnimation}
             setStopAnimation={setStopAnimation}
           />
         </GameinterfaceDesk>
       </Boxarea>
-      {/*  <GameinterfaceDesk>
-                <GameInterface
-                    hint={hint}
-                    scoreState={scoreState}
-                    life={life}
-                /> 
-              
-            </GameinterfaceDesk>*/}
 
       <Gameinterface>
         <GameInterface
           hint={hint}
           scoreState={scoreState}
           life={life}
-          //life={life.current}
-
           stopAnimation={stopAnimation}
           setStopAnimation={setStopAnimation}
         />

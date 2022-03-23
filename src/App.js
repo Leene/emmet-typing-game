@@ -47,6 +47,9 @@ export default function App() {
 }
 
 const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+
   background: linear-gradient(
     0deg,
     ${COLORS.background1} 9%,
@@ -61,6 +64,9 @@ const Main = styled.main`
 
 const Header = styled.header`
   display: flex;
+  align-self: center;
+  height: 10vh;
+  width: 100vw;
   justify-content: space-between;
 
   ${VIEWPORT.small} {
@@ -70,10 +76,7 @@ const Header = styled.header`
   }
 
   ${VIEWPORT.large} {
-    // justify-content: space-evenly;
-    //justify-content: space-between;
-
-    //width: 70vw;
+    width: 70vw;
   }
 `;
 
@@ -104,6 +107,6 @@ const NavButton = styled.button`
   }
 
   ${VIEWPORT.large} {
-    margin: 0 20vw;
+    margin: 0 10px;
   }
 `;

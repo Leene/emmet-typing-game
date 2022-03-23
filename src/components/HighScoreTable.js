@@ -2,34 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import { COLORS, VIEWPORT } from "../constants";
 import InGameHeader from "./InGameHeader";
-//import HighScoreInputDialog from "./HighScoreInputDialog";
 import HighScoreTableRow from "./HighScoreTableRow";
 import {
   collection,
   query,
   onSnapshot,
-  doc,
-  updateDoc,
-  deleteDoc,
   orderBy,
   limit,
 } from "firebase/firestore";
 import { db } from "../firebase";
 
-//>>>>>>>>>>>>>>>>>>>
-//<<<<<<<<<<<<<<<<<<<<
-
 function HighScoreTable(props) {
-  //>>>>>>>>>>>>>>>>>>>
   const [highscore, setHighscore] = React.useState([]);
 
   React.useEffect(() => {
-    /*     const q = query(collection(db, "highscore")); */
-
     const collectionRef = collection(db, "highscore");
-    //const q = query(collectionRef, orderBy("nameOfPlayer"));
     const q = query(collectionRef, orderBy("scoreInDB", "desc"), limit(10));
-
     const unsub = onSnapshot(q, (querySnapshot) => {
       let highscoreArray = [];
       querySnapshot.forEach((doc) => {
@@ -39,7 +27,6 @@ function HighScoreTable(props) {
     });
     return () => unsub();
   }, []);
-  //<<<<<<<<<<<<<<<<<<<<
 
   function renderTable() {
     return (
@@ -56,7 +43,7 @@ function HighScoreTable(props) {
       <Section>
         <InGameHeader />
         <Div>
-          <H3>Punktetabelle- Top Ten</H3>
+          <H3>Punktetabelle - Top Ten</H3>
           <InsetShadow>
             <Box>
               <Table>

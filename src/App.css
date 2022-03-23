@@ -16,5 +16,5 @@
 .flex_row {
   display: flex;
   flex-direction: row;
-  width: 0px;
+  width: 100px;
 }
